@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         this.mVelocityTracker.computeCurrentVelocity(1000);
         for (int h = 0; h < historySize; h++) {
             for (int p = 0; p < pointerCount; p++) {
-                String[] aGes = new String[8];
+                String[] aGes = new String[9];
                 aGes[0] = String.valueOf(ev.getHistoricalEventTime(h));
                 aGes[1] = String.valueOf(ev.getPointerId(p));
                 aGes[2] = String.valueOf(ev.getHistoricalX(p,h));
@@ -98,11 +98,12 @@ public class MainActivity extends AppCompatActivity {
                 aGes[5] = String.valueOf(ev.getHistoricalSize(p,h));
                 aGes[6] = "0.0";
                 aGes[7] = "0.0";
+                aGes[8] = String.valueOf(ev.getHistoricalOrientation(p,h));
                 this.gesData.add(aGes);
             }
         }
         for (int p = 0; p < pointerCount; p++) {
-            String[] aGes = new String[8];
+            String[] aGes = new String[9];
             aGes[0] = String.valueOf(ev.getEventTime());
             aGes[1] = String.valueOf(ev.getPointerId(p));
             aGes[2] = String.valueOf(ev.getX(p));
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
             aGes[5] = String.valueOf(ev.getSize());
             aGes[6] = String.valueOf(this.mVelocityTracker.getXVelocity(p));
             aGes[7] = String.valueOf(this.mVelocityTracker.getYVelocity(p));
+            aGes[8] = String.valueOf(ev.getOrientation());
             this.gesData.add(aGes);
         }
     }
