@@ -184,6 +184,7 @@ public class Server {
                 }
             }
         }
+        myNetAddress = null;
         if(myNetAddress == null){
             Console c = System.console();
             if(c==null){
