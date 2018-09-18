@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 
 
 public class Server {
+    public static SwingWorkerRealTime swrt = new SwingWorkerRealTime();
     private HashSet<ConcurrentLinkedQueue<String>> QueArr = new HashSet<>();
     private int SWcount = 0;
     private int OBJcount = 0;
@@ -160,6 +161,14 @@ public class Server {
     }
 
     public static void main(String[] args) throws Exception {
+        Runnable plot = new Runnable() {
+            @Override
+            public void run() {
+                swrt.go();
+            }
+        };
+        ExecutorService T = Executors.newSingleThreadExecutor();
+        T.execute(plot);
         if(args.length<1){
             System.out.println("usage: java server /path/to/directory");
             return;
@@ -616,9 +625,9 @@ class sw_task implements Runnable {
                                                 String data = reader.readLine();
                                                 if(!data.equals("stop")) {
                                                     StringBuilder st = new StringBuilder();
-                                                    st.append("SWTbuffer1");
+                                                    //st.append("SWTbuffer1");
                                                     st.append(data);
-                                                    Server.gdata.offer(st.toString());
+                                                    Server.swrt.data1.offer(st.toString());
                                                 }
                                                 if (data.contains("stop")) {
                                                     Server.status.put(client, false);
