@@ -34,7 +34,7 @@ public class Monitor {
                 if (message.equals("e")) {
                 }
                 if (message.equals("TYPE")) {
-                    String t = "OBJ_"+"macbook";
+                    String t = "OBJ_"+"Monitor";
                     sendMSG(t);
                 }
                 if (message.equals("time")) {
@@ -102,7 +102,7 @@ public class Monitor {
 
 /*TCPclient from the Internet https://stackoverflow.com/questions/38162775/really-simple-tcp-client*/
 class TCPc implements Runnable{
-    public static final String SERVER_IP = "10.42.0.10";//"10.34.25.234";//"172.20.10.2"; 192.168.43.182//server IP address//"129.252.131.137"
+    public static final String SERVER_IP = "192.168.0.126";//"10.34.25.234";//"172.20.10.2"; 192.168.43.182//server IP address//"129.252.131.137"
     public static final int SERVER_PORT = 8888;
     public static final String TAG = "TCPClient";
     // message to send to the server
@@ -238,7 +238,7 @@ class SwingWorkerRealTime {
         chart.getStyler().setLegendVisible(false);
         chart.getStyler().setXAxisTicksVisible(false);
         chart.getStyler().setDefaultSeriesRenderStyle(XYSeries.XYSeriesRenderStyle.Line);
-        chart.getStyler().setYAxisMax(15.0);
+        chart.getStyler().setYAxisMax(5.0);
         chart.getStyler().setYAxisMin(0.0);
         // Show it
         sw = new SwingWrapper<XYChart>(chart);
@@ -299,6 +299,7 @@ class SwingWorkerRealTime {
                 }
                 if (swt != null) {
                     try {
+                        System.out.println(swt);
                         st = gson.fromJson(swt, colloectionType);
                         buffer3.addAll(st);
                     } catch (JsonSyntaxException e) {
