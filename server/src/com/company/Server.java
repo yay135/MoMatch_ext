@@ -30,7 +30,7 @@ public class Server {
     static Map<String, Map<String, count>> allCountMaps = new ConcurrentHashMap<>();
     private static Map<String,Socket> AddressClient = new ConcurrentHashMap<>();
     private  static Map<Socket,String> TypeMap = new ConcurrentHashMap<>();
-    private static ConcurrentLinkedQueue<String> gdata = new ConcurrentLinkedQueue<>();
+    public static ConcurrentLinkedQueue<String> gdata = new ConcurrentLinkedQueue<>();
     private ServerSocket server;
 
     private Server(InetAddress myNetAddress) throws Exception {
@@ -614,7 +614,10 @@ class sw_task implements Runnable {
                                             Thread.sleep(1);
                                             if (!Server.isCali.get(client)) {
                                                 String data = reader.readLine();
-
+                                                StringBuilder st = new StringBuilder();
+                                                st.append("SWTbuffer1");st.append(data);
+                                                Server.gdata.offer(st.toString());
+                                                System.out.println(st);
                                                 if (data.contains("stop")) {
                                                     Server.status.put(client, false);
                                                     System.out.println("watch" + swc + " sleep");
@@ -622,7 +625,6 @@ class sw_task implements Runnable {
                                                 }
                                                 for (Map.Entry entry : SenMap.entrySet()) {
                                                     ((SensorData) entry.getValue()).write(data);
-
                                                 }
                                             }
                                         } catch (Exception e) {
