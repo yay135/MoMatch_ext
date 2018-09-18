@@ -614,10 +614,12 @@ class sw_task implements Runnable {
                                             Thread.sleep(1);
                                             if (!Server.isCali.get(client)) {
                                                 String data = reader.readLine();
-                                                StringBuilder st = new StringBuilder();
-                                                st.append("SWTbuffer1");st.append(data);
-                                                Server.gdata.offer(st.toString());
-                                                System.out.println(st);
+                                                if(!data.equals("stop")) {
+                                                    StringBuilder st = new StringBuilder();
+                                                    st.append("SWTbuffer1");
+                                                    st.append(data);
+                                                    Server.gdata.offer(st.toString());
+                                                }
                                                 if (data.contains("stop")) {
                                                     Server.status.put(client, false);
                                                     System.out.println("watch" + swc + " sleep");
