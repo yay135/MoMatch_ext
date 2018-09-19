@@ -15,7 +15,6 @@ import com.google.gson.Gson;
 
 
 public class Server {
-    public static SwingWorkerRealTime swrt = new SwingWorkerRealTime();
     private HashSet<ConcurrentLinkedQueue<String>> QueArr = new HashSet<>();
     private int SWcount = 0;
     private int OBJcount = 0;
@@ -96,7 +95,7 @@ public class Server {
                                 while(true){
                                     try {
                                         Thread.sleep(1);
-                                        if (gdata != null && gdata.peek() != null) {
+                                        if (gdata != null && gdata.peek() != null){
                                             String data = gdata.poll();
                                             if (data != null) {
                                                 writer.println(data);
@@ -161,14 +160,6 @@ public class Server {
     }
 
     public static void main(String[] args) throws Exception {
-        Runnable plot = new Runnable() {
-            @Override
-            public void run() {
-                swrt.go();
-            }
-        };
-        ExecutorService T = Executors.newSingleThreadExecutor();
-        T.execute(plot);
         if(args.length<1){
             System.out.println("usage: java server /path/to/directory");
             return;
@@ -193,7 +184,6 @@ public class Server {
                 }
             }
         }
-        myNetAddress = null;
         if(myNetAddress == null){
             Console c = System.console();
             if(c==null){
@@ -423,7 +413,6 @@ class sp_task implements Runnable{
                                 break;
                             }
                             data.write(ss);
-                            System.out.println(ss);
                         }
 
                     }
@@ -562,6 +551,7 @@ class sw_task implements Runnable {
     private int swc;
     private ExecutorService pool;
     private ConcurrentLinkedQueue<wrapper> que;
+    private SwingWorkerRealTime swrt;
 
 
     sw_task(String deviceId, Socket client, String ip, ConcurrentLinkedQueue<String> sq, int num, ConcurrentLinkedQueue<wrapper> que) {
@@ -571,6 +561,7 @@ class sw_task implements Runnable {
         this.swc = num;
         this.pool = Executors.newFixedThreadPool(10);
         this.que = que;
+        this.swrt = new SwingWorkerRealTime();
         if (Server.allCountMaps.containsKey(deviceId)) {
             this.CountMap = Server.allCountMaps.get(deviceId);
         } else {
@@ -580,6 +571,14 @@ class sw_task implements Runnable {
     }
 
     public void run() {
+        Runnable plot = new Runnable() {
+            @Override
+            public void run() {
+                swrt.go();
+            }
+        };
+        ExecutorService T = Executors.newSingleThreadExecutor();
+        T.execute(plot);
         try {
             Server.Accept.put(client,true);
             System.out.println("watch thread start");
@@ -589,6 +588,7 @@ class sw_task implements Runnable {
                 Thread.sleep(1);
                 if (client.isClosed()) {
                     System.out.println("socket closed terminating...");
+                    this.swrt.Terminate = true;
                     break;
                 }
                 try {
@@ -624,10 +624,7 @@ class sw_task implements Runnable {
                                             if (!Server.isCali.get(client)) {
                                                 String data = reader.readLine();
                                                 if(!data.equals("stop")) {
-                                                    StringBuilder st = new StringBuilder();
-                                                    //st.append("SWTbuffer1");
-                                                    st.append(data);
-                                                    Server.swrt.data1.offer(st.toString());
+                                                    swrt.data1.offer(data);
                                                 }
                                                 if (data.contains("stop")) {
                                                     Server.status.put(client, false);
@@ -703,6 +700,7 @@ class sw_task implements Runnable {
                     e.printStackTrace();
                 }
             }
+            swrt.Terminate = true;
         } catch (Exception e) {
             e.printStackTrace();
         }

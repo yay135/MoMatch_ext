@@ -7,11 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa5f63c2-22c8-475f-8192-41b94ea13edf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Monitor/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Monitor/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Monitor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Monitor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/server_jar/server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/server_jar/server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SensorData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SensorData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/Server$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/Server$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime$MySwingWorker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime$MySwingWorker$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime$MySwingWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime$MySwingWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/count.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/count.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/node_task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/node_task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/sp_task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/sp_task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/sw_task$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/sw_task$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/sw_task$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/sw_task$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/sw_task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/sw_task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/wrapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -53,34 +73,38 @@
     <session id="182839949">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="JAVA" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="352" />
+          <entry key="JAVA" value="869" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="1" />
           <entry key="java" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="352" />
+          <entry key="java" value="869" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -91,12 +115,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1285">
-              <caret line="627" column="45" lean-forward="true" selection-start-line="627" selection-start-column="45" selection-end-line="627" selection-end-column="45" />
+            <state relative-caret-position="1033">
+              <caret line="702" column="34" lean-forward="true" selection-start-line="702" selection-start-column="34" selection-end-line="702" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7542#7543#0" expanded="true" />
-                <element signature="e#7583#7584#0" expanded="true" />
+                <element signature="e#27519#27520#0" expanded="true" />
+                <element signature="e#27560#27561#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+            <state relative-caret-position="-293">
+              <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,6 +158,7 @@
       <find>startCount</find>
       <find>gdata</find>
       <find>Monitor</find>
+      <find>execute</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,8 +167,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Server.java" />
         <option value="$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Server.java" />
       </list>
     </option>
   </component>
@@ -165,6 +190,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -188,15 +215,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537307098026" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Monitor" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537383910735" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -285,17 +310,19 @@
       <workItem from="1537211859133" duration="1102000" />
       <workItem from="1537300234163" duration="1937000" />
       <workItem from="1537302970492" duration="4086000" />
+      <workItem from="1537314927250" duration="1084000" />
+      <workItem from="1537316332703" duration="946000" />
+      <workItem from="1537380535536" duration="3947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54709000" />
+    <option name="totallyTimeSpent" value="60686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18154311" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18986385" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -304,7 +331,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.58196723" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3786885" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20655738" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -332,22 +359,29 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/src/lib/xchart-3.5.2.jar!/org/knowm/xchart/QuickChart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1285">
-          <caret line="627" column="45" lean-forward="true" selection-start-line="627" selection-start-column="45" selection-end-line="627" selection-end-column="45" />
+        <state relative-caret-position="1033">
+          <caret line="702" column="34" lean-forward="true" selection-start-line="702" selection-start-column="34" selection-end-line="702" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7542#7543#0" expanded="true" />
-            <element signature="e#7583#7584#0" expanded="true" />
+            <element signature="e#27519#27520#0" expanded="true" />
+            <element signature="e#27560#27561#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+        <state relative-caret-position="-293">
+          <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
