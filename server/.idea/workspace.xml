@@ -6,34 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5f63c2-22c8-475f-8192-41b94ea13edf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Monitor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Monitor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/server_jar/server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/server_jar/server.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SensorData$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SensorData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/Server$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/Server$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime$MySwingWorker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime$MySwingWorker$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime$MySwingWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime$MySwingWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/SwingWorkerRealTime.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/count.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/count.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/node_task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/node_task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/sp_task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/sp_task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/sw_task$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/sw_task$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/sw_task$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/sw_task$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/sw_task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/sw_task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/com/company/wrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fa5f63c2-22c8-475f-8192-41b94ea13edf" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,13 +46,13 @@
     <session id="182839949">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -115,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1033">
-              <caret line="702" column="34" lean-forward="true" selection-start-line="702" selection-start-column="34" selection-end-line="702" selection-end-column="34" />
+            <state relative-caret-position="11543">
+              <caret line="702" column="34" selection-start-line="702" selection-start-column="34" selection-end-line="702" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#27519#27520#0" expanded="true" />
@@ -129,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-293">
-              <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+            <state relative-caret-position="17">
+              <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,9 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,6 +185,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,16 +286,17 @@
       <workItem from="1537314927250" duration="1084000" />
       <workItem from="1537316332703" duration="946000" />
       <workItem from="1537380535536" duration="3947000" />
+      <workItem from="1537392097742" duration="47000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60686000" />
+    <option name="totallyTimeSpent" value="60733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18986385" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19288956" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -368,8 +342,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1033">
-          <caret line="702" column="34" lean-forward="true" selection-start-line="702" selection-start-column="34" selection-end-line="702" selection-end-column="34" />
+        <state relative-caret-position="11543">
+          <caret line="702" column="34" selection-start-line="702" selection-start-column="34" selection-end-line="702" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#27519#27520#0" expanded="true" />
@@ -380,8 +354,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-293">
-          <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+        <state relative-caret-position="17">
+          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
