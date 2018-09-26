@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="635" column="63" lean-forward="true" selection-start-line="635" selection-start-column="63" selection-end-line="635" selection-end-column="63" />
+            <state relative-caret-position="9894">
+              <caret line="631" column="96" selection-start-line="631" selection-start-column="96" selection-end-line="631" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#27519#27520#0" expanded="true" />
@@ -293,16 +293,15 @@
       <workItem from="1537648982116" duration="38000" />
       <workItem from="1537791675599" duration="626000" />
       <workItem from="1537906943110" duration="5928000" />
-      <workItem from="1537923212668" duration="380000" />
+      <workItem from="1537923212668" duration="1640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67969000" />
+    <option name="totallyTimeSpent" value="69229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20801815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -313,7 +312,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.58196723" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5508197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -350,8 +349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="635" column="63" lean-forward="true" selection-start-line="635" selection-start-column="63" selection-end-line="635" selection-end-column="63" />
+        <state relative-caret-position="9894">
+          <caret line="631" column="96" selection-start-line="631" selection-start-column="96" selection-end-line="631" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#27519#27520#0" expanded="true" />

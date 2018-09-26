@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.v4.content.LocalBroadcastManager;
 
@@ -48,7 +49,7 @@ public class netService extends Service {
                 }
                 if (message.equals("time")) {
                     for (int i=0; i<5; i++) {
-                        mTCP.sendMessage(Long.toString(System.currentTimeMillis()) + "t");
+                        mTCP.sendMessage(Long.toString(SystemClock.uptimeMillis()) + "t");
                         try {
                             Thread.sleep(5);
                         } catch(InterruptedException e) {
