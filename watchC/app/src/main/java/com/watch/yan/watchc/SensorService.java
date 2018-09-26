@@ -18,6 +18,9 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -29,7 +32,7 @@ public class SensorService extends Service implements SensorEventListener {
     private long laccLastTimestamp = 0;
     private long gyroLastTimestamp = 0;
     private boolean flag = false;
-    private boolean one = false;
+    private boolean collected = false;
     //Binder Usage client
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
@@ -129,10 +132,9 @@ public class SensorService extends Service implements SensorEventListener {
     }
 
     private class SensorEventLoggerTask extends AsyncTask<SensorEvent, Void, String[]> {
+        private Queue<String[]> tmpData = new LinkedList<>();
         @Override
         protected String[] doInBackground(SensorEvent... events) {
-            if(flag) {
-                one = true;
                 String[] data = new String[5];
                 long currentTime = System.currentTimeMillis();
                 SensorEvent event = events[0];
@@ -155,8 +157,13 @@ public class SensorService extends Service implements SensorEventListener {
                                 data[4] = String.format("%.3f", event.values[2]); //Float.toString(event.values[2]);
                                 data[0] = (String.valueOf(currentTime));
                                 data[0] = data[0].substring(data[0].length() - 6);
-                                mSensorData.add(data);
-                                //Log.e("sensor", Arrays.toString(data));
+                                if (flag) {
+                                    collected=true;
+                                    mSensorData.add(data);
+                                } else {
+                                    tmpData.add(data);
+                                    if (tmpData.size() >= 25) tmpData.remove();
+                                }
                             }
                             break;
                         case Sensor.TYPE_GYROSCOPE:
@@ -171,10 +178,14 @@ public class SensorService extends Service implements SensorEventListener {
                                 data[4] = String.format("%.3f", event.values[2]); //Float.toString(event.values[2]);
                                 data[0] = String.valueOf(currentTime);
                                 data[0] = data[0].substring(data[0].length() - 6);
-                                mSensorData.add(data);
-                                //Log.e("sensor", Arrays.toString(data));
+                                if (flag) {
+                                    collected = true;
+                                    mSensorData.add(data);
+                                } else {
+                                    tmpData.add(data);
+                                    if (tmpData.size() >= 50) tmpData.remove();
+                                }
                             }
-                            break;
                     }
                }else{
                     final ArrayList<String[]> data0 = new ArrayList<>(mSensorData);
@@ -187,21 +198,27 @@ public class SensorService extends Service implements SensorEventListener {
                     };
                     aThread.execute(Sender);
                 }
-            }else {
-                if (one) {
-                    //final ArrayList<String[]> data0 = new ArrayList<>(mSensorData);
+                if(!flag&&collected){
+                    try{
+                        Thread.sleep(100);
+                    }catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                    collected = false;
                     mSensorData.clear();
+                    mService.sendMSG("stop");
+                }
+                if(flag&&!tmpData.isEmpty()){
+                    final ArrayList<String[]> data1 = new ArrayList<>(tmpData);
+                    tmpData.clear();
                     Runnable Sender = new Runnable() {
                         @Override
                         public void run() {
-                            //mService.send(data0);
-                            mService.sendMSG("stop");
+                            mService.send(data1);
                         }
                     };
                     aThread.execute(Sender);
-                    one = false;
                 }
-            }
             return null;
         }
     }

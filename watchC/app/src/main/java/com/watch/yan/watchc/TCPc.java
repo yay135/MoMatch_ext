@@ -67,8 +67,6 @@ public class TCPc implements Runnable{
         if (mBufferOut != null && !mBufferOut.checkError()) {
             mBufferOut.println(message);
             mBufferOut.flush();
-           // Log.d(TAG, "Sent Message: " + message);
-
         }
     }
 

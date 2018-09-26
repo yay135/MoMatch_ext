@@ -6,7 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5f63c2-22c8-475f-8192-41b94ea13edf" name="Default" comment="" />
+    <list default="true" id="fa5f63c2-22c8-475f-8192-41b94ea13edf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../gestures_android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../gestures_android/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,13 +53,15 @@
     <session id="182839949">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.14" value="2" />
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -64,7 +73,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="869" />
+          <entry key="JAVA" value="870" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -77,7 +86,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="869" />
+          <entry key="java" value="870" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -85,11 +94,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11543">
-              <caret line="702" column="34" selection-start-line="702" selection-start-column="34" selection-end-line="702" selection-end-column="34" />
+            <state relative-caret-position="281">
+              <caret line="633" column="71" selection-start-line="633" selection-start-column="71" selection-end-line="633" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#27519#27520#0" expanded="true" />
@@ -99,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="-492">
               <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -163,6 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,9 +196,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,16 +295,20 @@
       <workItem from="1537316332703" duration="946000" />
       <workItem from="1537380535536" duration="3947000" />
       <workItem from="1537392097742" duration="47000" />
+      <workItem from="1537392260055" duration="264000" />
+      <workItem from="1537648982116" duration="38000" />
+      <workItem from="1537791675599" duration="626000" />
+      <workItem from="1537906943110" duration="5928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60733000" />
+    <option name="totallyTimeSpent" value="67589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19288956" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20499243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -305,7 +317,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.58196723" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20655738" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20163934" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -340,24 +352,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11543">
-          <caret line="702" column="34" selection-start-line="702" selection-start-column="34" selection-end-line="702" selection-end-column="34" />
+        <state relative-caret-position="-492">
+          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#27519#27520#0" expanded="true" />
-            <element signature="e#27560#27561#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/SwingWorkerRealTime.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+        <state relative-caret-position="281">
+          <caret line="633" column="71" selection-start-line="633" selection-start-column="71" selection-end-line="633" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#27519#27520#0" expanded="true" />
+            <element signature="e#27560#27561#0" expanded="true" />
           </folding>
         </state>
       </provider>

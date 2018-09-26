@@ -90,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
         for (int h = 0; h < historySize; h++) {
             for (int p = 0; p < pointerCount; p++) {
                 String[] aGes = new String[9];
-                aGes[0] = String.valueOf(ev.getHistoricalEventTime(h));
+                String ss = String.valueOf(ev.getHistoricalEventTime(h));
+                aGes[0] = ss.substring(ss.length()-6);
                 aGes[1] = String.valueOf(ev.getPointerId(p));
                 aGes[2] = String.valueOf(ev.getHistoricalX(p,h));
                 aGes[3] = String.valueOf(ev.getHistoricalY(p,h));
@@ -104,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
         }
         for (int p = 0; p < pointerCount; p++) {
             String[] aGes = new String[9];
-            aGes[0] = String.valueOf(ev.getEventTime());
+            String ss = String.valueOf(ev.getEventTime());
+            aGes[0] = ss.substring(ss.length()-6);
             aGes[1] = String.valueOf(ev.getPointerId(p));
             aGes[2] = String.valueOf(ev.getX(p));
             aGes[3] = String.valueOf(ev.getY(p));

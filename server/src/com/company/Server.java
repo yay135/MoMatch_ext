@@ -623,9 +623,6 @@ class sw_task implements Runnable {
                                             Thread.sleep(1);
                                             if (!Server.isCali.get(client)) {
                                                 String data = reader.readLine();
-                                                if(!data.equals("stop")) {
-                                                    swrt.data1.offer(data);
-                                                }
                                                 if (data.contains("stop")) {
                                                     Server.status.put(client, false);
                                                     System.out.println("watch" + swc + " sleep");
@@ -634,6 +631,7 @@ class sw_task implements Runnable {
                                                 for (Map.Entry entry : SenMap.entrySet()) {
                                                     ((SensorData) entry.getValue()).write(data);
                                                 }
+                                                swrt.data1.offer(data);
                                             }
                                         } catch (Exception e) {
                                             e.printStackTrace();
