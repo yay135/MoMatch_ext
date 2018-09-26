@@ -578,7 +578,7 @@ class sw_task implements Runnable {
             }
         };
         ExecutorService T = Executors.newSingleThreadExecutor();
-        T.execute(plot);
+        //T.execute(plot);
         try {
             Server.Accept.put(client,true);
             System.out.println("watch thread start");
@@ -631,7 +631,7 @@ class sw_task implements Runnable {
                                                 for (Map.Entry entry : SenMap.entrySet()) {
                                                     ((SensorData) entry.getValue()).write(data);
                                                 }
-                                                swrt.data1.offer(data);
+                                               //swrt.data1.offer(data);
                                             }
                                         } catch (Exception e) {
                                             e.printStackTrace();
