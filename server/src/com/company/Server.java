@@ -237,7 +237,7 @@ public class Server {
                                                         break;
                                                     }
                                                     if (timeMSG.matches(".*t")) {
-                                                        timeDiff += (time - Long.parseLong(timeMSG.substring(0, timeMSG.length() - 1))) % 1000000;
+                                                        timeDiff += (time - Long.parseLong(timeMSG.substring(0, timeMSG.length() - 1)));
                                                     }
                                                     if (timeMSG.equals("q")) {
                                                         timeDiff /= 5;

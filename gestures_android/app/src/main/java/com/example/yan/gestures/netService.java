@@ -49,7 +49,7 @@ public class netService extends Service {
                 }
                 if (message.equals("time")) {
                     for (int i=0; i<5; i++) {
-                        mTCP.sendMessage(Long.toString(SystemClock.uptimeMillis()) + "t");
+                        mTCP.sendMessage(Long.toString(System.currentTimeMillis()) + "t");
                         try {
                             Thread.sleep(5);
                         } catch(InterruptedException e) {

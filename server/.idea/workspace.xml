@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5f63c2-22c8-475f-8192-41b94ea13edf" name="Default" comment="" />
+    <list default="true" id="fa5f63c2-22c8-475f-8192-41b94ea13edf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Server.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9894">
-              <caret line="631" column="96" selection-start-line="631" selection-start-column="96" selection-end-line="631" selection-end-column="96" />
+            <state relative-caret-position="323">
+              <caret line="239" column="135" lean-forward="true" selection-start-line="239" selection-start-column="135" selection-end-line="239" selection-end-column="135" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#27519#27520#0" expanded="true" />
@@ -293,12 +296,12 @@
       <workItem from="1537648982116" duration="38000" />
       <workItem from="1537791675599" duration="626000" />
       <workItem from="1537906943110" duration="5928000" />
-      <workItem from="1537923212668" duration="1640000" />
+      <workItem from="1537923212668" duration="7282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69229000" />
+    <option name="totallyTimeSpent" value="74871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -312,7 +315,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.58196723" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5508197" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5360656" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,8 +352,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9894">
-          <caret line="631" column="96" selection-start-line="631" selection-start-column="96" selection-end-line="631" selection-end-column="96" />
+        <state relative-caret-position="323">
+          <caret line="239" column="135" lean-forward="true" selection-start-line="239" selection-start-column="135" selection-end-line="239" selection-end-column="135" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#27519#27520#0" expanded="true" />

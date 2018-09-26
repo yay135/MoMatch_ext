@@ -2,6 +2,7 @@ package com.example.yan.gestures;
 
 import android.content.Intent;
 import android.gesture.GestureOverlayView;
+import android.os.SystemClock;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -83,29 +84,30 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
     public void gatherSamples(MotionEvent ev) {
+        long diff = System.currentTimeMillis() - SystemClock.uptimeMillis();
         final int historySize = ev.getHistorySize();
         final int pointerCount = ev.getPointerCount();
         this.mVelocityTracker.addMovement(ev);
         this.mVelocityTracker.computeCurrentVelocity(1000);
-        for (int h = 0; h < historySize; h++) {
-            for (int p = 0; p < pointerCount; p++) {
-                String[] aGes = new String[9];
-                String ss = String.valueOf(ev.getHistoricalEventTime(h));
-                aGes[0] = ss.substring(ss.length()-6);
-                aGes[1] = String.valueOf(ev.getPointerId(p));
-                aGes[2] = String.valueOf(ev.getHistoricalX(p,h));
-                aGes[3] = String.valueOf(ev.getHistoricalY(p,h));
-                aGes[4] = String.valueOf(ev.getHistoricalPressure(p,h));
-                aGes[5] = String.valueOf(ev.getHistoricalSize(p,h));
-                aGes[6] = "0.0";
-                aGes[7] = "0.0";
-                aGes[8] = String.valueOf(ev.getHistoricalOrientation(p,h));
-                this.gesData.add(aGes);
-            }
-        }
+//        for (int h = 0; h < historySize; h++) {
+//            for (int p = 0; p < pointerCount; p++) {
+//                String[] aGes = new String[9];
+//                String ss = String.valueOf(ev.getHistoricalEventTime(h));
+//                aGes[0] = ss.substring(ss.length()-6);
+//                aGes[1] = String.valueOf(ev.getPointerId(p));
+//                aGes[2] = String.valueOf(ev.getHistoricalX(p,h));
+//                aGes[3] = String.valueOf(ev.getHistoricalY(p,h));
+//                aGes[4] = String.valueOf(ev.getHistoricalPressure(p,h));
+//                aGes[5] = String.valueOf(ev.getHistoricalSize(p,h));
+//                aGes[6] = "0.0";
+//                aGes[7] = "0.0";
+//                aGes[8] = String.valueOf(ev.getHistoricalOrientation(p,h));
+//                this.gesData.add(aGes);
+//            }
+//        }
         for (int p = 0; p < pointerCount; p++) {
             String[] aGes = new String[9];
-            String ss = String.valueOf(ev.getEventTime());
+            String ss = String.valueOf(ev.getEventTime()+diff);
             aGes[0] = ss.substring(ss.length()-6);
             aGes[1] = String.valueOf(ev.getPointerId(p));
             aGes[2] = String.valueOf(ev.getX(p));
