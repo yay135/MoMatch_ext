@@ -108,7 +108,11 @@ public class Main {
                     }
                 }
             };
-            final String pa = "C:\\Users\\yay13\\Sensordata";
+            BufferedReader r = new BufferedReader(new InputStreamReader(
+                    System.in));
+            System.out.println("input directory:");
+            String s = reader.readLine();
+            final String pa = s;
             Runnable writer = new Runnable() {
                 @Override
                 public void run() {
