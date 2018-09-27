@@ -10,6 +10,7 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -44,6 +45,7 @@ public class netService extends Service {
         mTCP = new TCPc(new TCPc.OnMessageReceived() {
             @Override
             public void messageReceived(String message) {
+                Log.e("received",message);
                 if(message.equals("TYPE")){
                     mTCP.sendMessage("SP_"+android_id);
                 }
