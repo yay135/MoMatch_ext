@@ -64,24 +64,28 @@ public class Main {
                 ArrayList<Long> timediffs = new ArrayList<>();
                 while (true) {
                     String timeStr = Reader.readLine();
-                    System.out.println(timeStr);
                     if (timeStr.equals("q")) {
                         break;
                     }
                     String time = timeStr.substring(0, timeStr.length() - 1);
-                    timediffs.add(System.currentTimeMillis() - Long.parseLong(time));
+                    Long aDiff = System.currentTimeMillis() - Long.parseLong(time);
+                    timediffs.add(aDiff);
                 }
-                Long max = Long.MIN_VALUE; Long min = Long.MIN_VALUE;
-                for(Long diff:timediffs){
-                    max = Math.max(max,diff);
-                    min = Math.min(min,diff);
+                Long max = Long.MIN_VALUE; Long min = Long.MAX_VALUE; int h=-1; int l=-1;
+                for(int i=0;i<timediffs.size();i++){
+                    if(timediffs.get(i)>max){
+                        max = timediffs.get(i);h=i;
+                    }
+                    if(timediffs.get(i)<min){
+                        min = timediffs.get(i);l=i;
+                    }
                 }
-                timediffs.remove(max);timediffs.remove(min);
+                timediffs.remove(h);timediffs.remove(l);
                 long sum = 0;
                 for(Long num:timediffs){
                     sum += num;
                 }
-                timeDiff.put(client,(long)(sum/8.0));
+                timeDiff.put(client,sum/8);
             }
             System.out.println("Successfully connected with 2 devices");
             BufferedReader reader0 = (BufferedReader) communicators.get(sockets.get(0)).get("reader");
