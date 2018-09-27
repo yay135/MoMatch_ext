@@ -129,7 +129,7 @@ public class Main {
                                         path = pa + "/exp_" + wrap.ip.substring(wrap.ip.length() - 2) + "/";
                                     }
                                     String DirectoryName = path.concat(String.valueOf(wrap.cc));
-                                    String fileName = wrap.type +".csv";
+                                    String fileName = wrap.type +"_"+wrap.timeDiff+".csv";
                                     File directory = new File(DirectoryName);
                                     if (!directory.exists()) {
                                         boolean success = directory.mkdirs();

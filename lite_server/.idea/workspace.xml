@@ -7,15 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="840fba1d-2a84-4d5d-9a22-503913738529" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/lite_server_jar/lite_server.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/wrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,14 +52,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="33" />
+          <entry key="java" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="33" />
+          <entry key="JAVA" value="40" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.types.open" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.extensions.open" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
@@ -75,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+            <state relative-caret-position="205">
+              <caret line="131" column="83" selection-start-line="131" selection-start-column="83" selection-end-line="131" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,12 +190,12 @@
       <updated>1537993989146</updated>
       <workItem from="1537993993147" duration="11821000" />
       <workItem from="1538012859106" duration="2672000" />
-      <workItem from="1538016165822" duration="1518000" />
+      <workItem from="1538016165822" duration="2025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16011000" />
+    <option name="totallyTimeSpent" value="16518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -221,7 +219,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -242,8 +240,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+        <state relative-caret-position="205">
+          <caret line="131" column="83" selection-start-line="131" selection-start-column="83" selection-end-line="131" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
