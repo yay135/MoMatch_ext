@@ -162,7 +162,7 @@ public class SensorService extends Service implements SensorEventListener {
                                     mSensorData.add(data);
                                 } else {
                                     tmpData.add(data);
-                                    if (tmpData.size() >= 25) tmpData.remove();
+                                    if (tmpData.size() >= 50) tmpData.remove();
                                 }
                             }
                             break;

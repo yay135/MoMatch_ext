@@ -50,7 +50,7 @@ public class netService extends Service {
                     mTCP.sendMessage("SP_"+android_id);
                 }
                 if (message.equals("time")) {
-                    for (int i=0; i<5; i++) {
+                    for (int i=0; i<10; i++) {
                         mTCP.sendMessage(Long.toString(System.currentTimeMillis()) + "t");
                         try {
                             Thread.sleep(5);

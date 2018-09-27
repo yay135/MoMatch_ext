@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onGestureStarted(GestureOverlayView gestureOverlayView,
                                          MotionEvent motionEvent) {
-                Log.e("gesture","started");
+                //Log.e("gesture","started");
                 Intent cmd=new Intent("MainActivity");
                 cmd.putExtra("data","start");
                 lbm.sendBroadcast(cmd);
@@ -47,13 +47,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onGesture(GestureOverlayView gestureOverlayView,
                                   MotionEvent motionEvent) {
-                Log.e("gesture","ongoing");
+                //Log.e("gesture","ongoing");
                 gatherSamples(motionEvent);
             }
             @Override
             public void onGestureEnded(GestureOverlayView gestureOverlayView,
                                        MotionEvent motionEvent) {
-                Log.e("gesture","ended");
+                //Log.e("gesture","ended");
                 gatherSamples(motionEvent);
                 if(sendSamples()) {
                     Intent cmd = new Intent("MainActivity");
@@ -64,7 +64,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onGestureCancelled(GestureOverlayView gestureOverlayView,
                                            MotionEvent motionEvent) {
-                Log.e("gesture","canceled");
+                //Log.e("gesture","canceled");
+                if(sendSamples()) {
+                    Intent cmd = new Intent("MainActivity");
+                    cmd.putExtra("data", "stop");
+                    lbm.sendBroadcast(cmd);
+                }
                 mVelocityTracker.recycle();
             }
         });
@@ -125,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
         data.putExtra("data",this.ObjectToJson(this.gesData));
         this.gesData.clear();
         this.lbm.sendBroadcastSync(data);
+        try {
+            Thread.sleep(30);
+        }catch(InterruptedException e) {
+            return true;
+        }
         return true;
     }
     public String ObjectToJson(Object m) {

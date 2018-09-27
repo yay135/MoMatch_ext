@@ -61,18 +61,27 @@ public class Main {
                 System.out.println("sent time");
                 Writer.println("time");
                 Writer.flush();
-                long TimeDiff = 0;
+                ArrayList<Long> timediffs = new ArrayList<>();
                 while (true) {
                     String timeStr = Reader.readLine();
                     System.out.println(timeStr);
                     if (timeStr.equals("q")) {
-                        TimeDiff /= 5;
-                        timeDiff.put(client, TimeDiff);
                         break;
                     }
                     String time = timeStr.substring(0, timeStr.length() - 1);
-                    TimeDiff += System.currentTimeMillis() - Long.parseLong(time);
+                    timediffs.add(System.currentTimeMillis() - Long.parseLong(time));
                 }
+                Long max = Long.MIN_VALUE; Long min = Long.MIN_VALUE;
+                for(Long diff:timediffs){
+                    max = Math.max(max,diff);
+                    min = Math.min(min,diff);
+                }
+                timediffs.remove(max);timediffs.remove(min);
+                long sum = 0;
+                for(Long num:timediffs){
+                    sum += num;
+                }
+                timeDiff.put(client,(long)(sum/8.0));
             }
             System.out.println("Successfully connected with 2 devices");
             BufferedReader reader0 = (BufferedReader) communicators.get(sockets.get(0)).get("reader");
@@ -85,20 +94,9 @@ public class Main {
                         try {
                             String data = reader1.readLine();
                             if (data.equals("stop")) {
-                                int c = count;
-                                wrapper toPut = new wrapper();
-                                toPut.da = swData;
-                                toPut.cc = c;
-                                toPut.idx = 1;
-                                toPut.ip = sockets.get(1).getInetAddress().toString();
-                                toPut.timeDiff = timeDiff.get(sockets.get(1));
-                                toPut.type = "SW";
-                                toPut.label = "woehfh20j9o4r45";
-                                while (true) {
-                                    if (que.offer(toPut)) {
-                                        break;
-                                    }
-                                }
+                                SensorData tmp = new SensorData();tmp.data = new ArrayList<>(swData.data);swData.data.clear();
+                                writerToDisk(count,tmp,1,sockets.get(1).getInetAddress().toString(), timeDiff.get(sockets.get(1)),"sw","owijeof45",que);
+                                swData.data.clear();
                                 break;
                             }
                             swData.write(data);
@@ -118,7 +116,7 @@ public class Main {
                 public void run() {
                     while (true) {
                         try {
-                            Thread.sleep(1);
+                            Thread.sleep(100);
                             if (que.peek() != null) {
                                 wrapper wrap = que.poll();
                                 String path;
@@ -172,19 +170,8 @@ public class Main {
                         if (data0.equals("stop")) {
                             writer1.println("e");writer1.flush();
                             int c = count;
-                            wrapper toPut = new wrapper();
-                            toPut.da = spData;
-                            toPut.cc = c;
-                            toPut.idx = 1;
-                            toPut.ip = sockets.get(0).getInetAddress().toString();
-                            toPut.timeDiff = timeDiff.get(sockets.get(0));
-                            toPut.type = "SP";
-                            toPut.label = "osiehfwoe45";
-                            while (true) {
-                                if (que.offer(toPut)) {
-                                    break;
-                                }
-                            }
+                            SensorData tmp = new SensorData();tmp.data = new ArrayList<>(spData.data);spData.data.clear();
+                            writerToDisk(count,tmp,1,sockets.get(0).getInetAddress().toString(), timeDiff.get(sockets.get(0)),"sp","owijeof45",que);
                             break;
                         }
                         spData.write(data0);
@@ -193,6 +180,16 @@ public class Main {
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+    private static void writerToDisk(int c,SensorData sen,int idx,String ip, Long timediff, String type,
+                              String lable, ConcurrentLinkedQueue<wrapper> que){
+        wrapper toPut = new wrapper();
+        toPut.da = sen;toPut.cc = c;toPut.idx = 1;toPut.ip = ip;toPut.timeDiff = timediff;toPut.type = type;toPut.label = lable;
+        while (true) {
+            if (que.offer(toPut)) {
+                break;
+            }
         }
     }
 }
@@ -233,11 +230,5 @@ class SensorData {
     }
 }
 class wrapper {
-    SensorData da;
-    String type;
-    int idx;
-    long timeDiff;
-    String ip;
-    int cc;
-    String label;
+    SensorData da;String type;int idx;long timeDiff;String ip;int cc;String label;
 }

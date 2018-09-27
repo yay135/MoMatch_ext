@@ -81,7 +81,7 @@ public class netService extends Service {
                     sendMSG(t);
                 }
                 if (message.equals("time")) {
-                        for (int i=0; i<5; i++) {
+                        for (int i=0; i<10; i++) {
                             sendMSG(Long.toString(System.currentTimeMillis()) + "t");
                             try {
                                 Thread.sleep(5);
