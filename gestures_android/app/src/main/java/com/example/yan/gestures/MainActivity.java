@@ -7,12 +7,15 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import static android.view.MotionEvent.ACTION_DOWN;
 import static android.view.MotionEvent.ACTION_MOVE;
@@ -22,6 +25,90 @@ public class MainActivity extends AppCompatActivity {
     private LocalBroadcastManager lbm;
     private ArrayList<String[]> gesData = new ArrayList<>();
     private VelocityTracker mVelocityTracker;
+    private Map<Integer,String[]> keyDatas = new HashMap();
+    private boolean sig = true;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.d("pressed",String.valueOf(keyCode));
+        boolean valid = false;
+        String[] keyData = new String[4];
+        String ss = String.valueOf(System.currentTimeMillis());
+        keyData[0] = ss.substring(ss.length()-6); keyData[1] = "9";
+        switch (keyCode){
+            case KeyEvent.KEYCODE_NUMPAD_0:
+                valid = true;
+                keyData[2] = "0";
+            case KeyEvent.KEYCODE_NUMPAD_1:
+                valid = true;
+                keyData[2] = "1";
+            case KeyEvent.KEYCODE_NUMPAD_2:
+                valid = true;
+                keyData[2] = "2";
+            case KeyEvent.KEYCODE_NUMPAD_3:
+                valid = true;
+                keyData[2] = "3";
+            case KeyEvent.KEYCODE_NUMPAD_4:
+                valid = true;
+                keyData[2] = "4";
+            case KeyEvent.KEYCODE_NUMPAD_5:
+                valid = true;
+                keyData[2] = "5";
+            case KeyEvent.KEYCODE_NUMPAD_6:
+                valid = true;
+                keyData[2] = "6";
+            case KeyEvent.KEYCODE_NUMPAD_7:
+                valid = true;
+                keyData[2] = "7";
+            case KeyEvent.KEYCODE_NUMPAD_8:
+                valid = true;
+                keyData[2] = "8";
+            case KeyEvent.KEYCODE_NUMPAD_9:
+                valid = true;
+                keyData[2] = "9";
+            case KeyEvent.KEYCODE_ENTER:
+                valid = true;
+                keyData[2] = "Enter";
+        }
+        if(valid && !keyDatas.containsKey(keyCode)){
+            keyDatas.put(keyCode,keyData);
+        }
+        if(sig){
+            Intent cmd=new Intent("MainActivity");
+            cmd.putExtra("data","start");
+            lbm.sendBroadcast(cmd);
+            sig = false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        Log.d("key", "keyup");
+        boolean sent = false;
+        if (keyDatas.containsKey(keyCode)) {
+            String ss = String.valueOf(System.currentTimeMillis());
+            ss = ss.substring(ss.length() - 6);
+            keyDatas.get(keyCode)[3] = String.valueOf(ss);
+            Intent data = new Intent("MainActivity");
+            ArrayList<String[]> tmp = new ArrayList<>();
+            tmp.add(keyDatas.get(keyCode));
+            data.putExtra("data", this.ObjectToJson(tmp));
+            this.lbm.sendBroadcastSync(data);
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {}
+            keyDatas.remove(keyCode);
+            if (keyDatas.size() == 0) {
+                Intent cmd = new Intent("MainActivity");
+                cmd.putExtra("data", "stop");
+                lbm.sendBroadcast(cmd);
+                sig = true;
+            }
+        }
+        return super.onKeyUp(keyCode, event);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         startService(new Intent(getApplicationContext(), netService.class));

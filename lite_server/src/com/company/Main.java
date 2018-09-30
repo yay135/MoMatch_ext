@@ -76,11 +76,14 @@ public class Main {
                     if(timediffs.get(i)>max){
                         max = timediffs.get(i);h=i;
                     }
+                }
+                timediffs.remove(h);
+                for(int i=0;i<timediffs.size();i++){
                     if(timediffs.get(i)<min){
                         min = timediffs.get(i);l=i;
                     }
                 }
-                timediffs.remove(h);timediffs.remove(l);
+                timediffs.remove(l);
                 long sum = 0;
                 for(Long num:timediffs){
                     sum += num;
