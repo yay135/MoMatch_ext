@@ -23,6 +23,7 @@ public class netService extends Service {
         @Override
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("data");
+            Log.d("data",message);
             mTCP.sendMessage(message);
         }
     };

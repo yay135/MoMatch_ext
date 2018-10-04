@@ -11,6 +11,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import static android.view.MotionEvent.ACTION_CANCEL;
 import static android.view.MotionEvent.ACTION_DOWN;
 import static android.view.MotionEvent.ACTION_MOVE;
 import static android.view.MotionEvent.ACTION_UP;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private Map<Integer,String[]> keyDatas = new HashMap();
     private boolean sig = true;
     private boolean start = false;
-    private TextView tex;
+    private Button tex;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -122,12 +124,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(start){
                     start = false;
+                    Log.e("button","click1");
                     Intent cmd=new Intent("logo");
                     cmd.putExtra("data","stop");
                     lbm.sendBroadcast(cmd);
                     return;
                 }
                 start = true;
+                Log.e("button","clicked0");
                 Intent cmd=new Intent("logo");
                 cmd.putExtra("data","start");
                 lbm.sendBroadcast(cmd);
@@ -136,65 +140,90 @@ public class MainActivity extends AppCompatActivity {
         });
         startService(new Intent(getApplicationContext(), netService.class));
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        GestureOverlayView geov = findViewById(R.id.gestures);
-        geov.setGestureVisible(true);
-        geov.addOnGestureListener(new GestureOverlayView.OnGestureListener() {
-            @Override
-            public void onGestureStarted(GestureOverlayView gestureOverlayView,
-                                         MotionEvent motionEvent) {
-                //Log.e("gesture","started");
-                Intent cmd=new Intent("MainActivity");
-                cmd.putExtra("data","start");
-                lbm.sendBroadcast(cmd);
-                if(mVelocityTracker==null){
-                    mVelocityTracker = VelocityTracker.obtain();
-                }else{
-                    mVelocityTracker.clear();
-                }
-                gatherSamples(motionEvent);
-            }
-            @Override
-            public void onGesture(GestureOverlayView gestureOverlayView,
-                                  MotionEvent motionEvent) {
-                //Log.e("gesture","ongoing");
-                gatherSamples(motionEvent);
-            }
-            @Override
-            public void onGestureEnded(GestureOverlayView gestureOverlayView,
-                                       MotionEvent motionEvent) {
-                //Log.e("gesture","ended");
-                gatherSamples(motionEvent);
-                if(sendSamples()) {
-                    Intent cmd = new Intent("MainActivity");
-                    cmd.putExtra("data", "stop");
-                    lbm.sendBroadcast(cmd);
-                }
-            }
-            @Override
-            public void onGestureCancelled(GestureOverlayView gestureOverlayView,
-                                           MotionEvent motionEvent) {
-                //Log.e("gesture","canceled");
-                if(sendSamples()) {
-                    Intent cmd = new Intent("MainActivity");
-                    cmd.putExtra("data", "stop");
-                    lbm.sendBroadcast(cmd);
-                }
-                mVelocityTracker.recycle();
-            }
-        });
+//        GestureOverlayView geov = findViewById(R.id.gestures);
+//        geov.setGestureVisible(true);
+//        geov.addOnGestureListener(new GestureOverlayView.OnGestureListener() {
+//            @Override
+//            public void onGestureStarted(GestureOverlayView gestureOverlayView,
+//                                         MotionEvent motionEvent) {
+//                //Log.e("gesture","started");
+//                Intent cmd=new Intent("MainActivity");
+//                cmd.putExtra("data","start");
+//                lbm.sendBroadcast(cmd);
+//                if(mVelocityTracker==null){
+//                    mVelocityTracker = VelocityTracker.obtain();
+//                }else{
+//                    mVelocityTracker.clear();
+//                }
+//                gatherSamples(motionEvent);
+//            }
+//            @Override
+//            public void onGesture(GestureOverlayView gestureOverlayView,
+//                                  MotionEvent motionEvent) {
+//                //Log.e("gesture","ongoing");
+//                gatherSamples(motionEvent);
+//            }
+//            @Override
+//            public void onGestureEnded(GestureOverlayView gestureOverlayView,
+//                                       MotionEvent motionEvent) {
+//                //Log.e("gesture","ended");
+//                gatherSamples(motionEvent);
+//                if(sendSamples()) {
+//                    Intent cmd = new Intent("MainActivity");
+//                    cmd.putExtra("data", "stop");
+//                    lbm.sendBroadcast(cmd);
+//                }
+//            }
+//            @Override
+//            public void onGestureCancelled(GestureOverlayView gestureOverlayView,
+//                                           MotionEvent motionEvent) {
+//                //Log.e("gesture","canceled");
+//                if(sendSamples()) {
+//                    Intent cmd = new Intent("MainActivity");
+//                    cmd.putExtra("data", "stop");
+//                    lbm.sendBroadcast(cmd);
+//                }
+//                mVelocityTracker.recycle();
+//            }
+//        });
         this.lbm = LocalBroadcastManager.getInstance(this);
     }
     @Override
     public boolean onTouchEvent(MotionEvent event){
-        int action = event.getActionMasked();
-        if(action==ACTION_MOVE){
-            Log.e("action",String.valueOf(action));
-            Log.e("ACTION_MOVE",String.valueOf(ACTION_MOVE));
-            Log.e("ACTION_DOWN",String.valueOf(ACTION_DOWN));
-            Log.e("ACTION_UP",String.valueOf(ACTION_UP));
+        Log.e("event type",String.valueOf(event.getAction()));
+        int action = event.getAction();
+        if(action==ACTION_DOWN){
+            Log.e("screen","touched");
+            Intent cmd=new Intent("MainActivity");
+            cmd.putExtra("data","start");
+            lbm.sendBroadcast(cmd);
+            if(mVelocityTracker==null){
+                mVelocityTracker = VelocityTracker.obtain();
+            }else{
+                mVelocityTracker.clear();
+            }
             gatherSamples(event);
-            sendSamples();
+        }
+        if(action==ACTION_MOVE){
+            Log.e("screen","gathering");
+            gatherSamples(event);
+        }
+        if(action==ACTION_UP){
+            Log.e("screen","sending");
+            gatherSamples(event);
+            if(sendSamples()) {
+                Intent cmd = new Intent("MainActivity");
+                cmd.putExtra("data", "stop");
+                lbm.sendBroadcast(cmd);
+            }
+        }
+        if(action==ACTION_CANCEL){
+            if(sendSamples()) {
+                Intent cmd = new Intent("MainActivity");
+                cmd.putExtra("data", "stop");
+                lbm.sendBroadcast(cmd);
+            }
+            mVelocityTracker.recycle();
         }
         return true;
     }
@@ -236,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public boolean sendSamples(){
-        Intent data=new Intent("MainActivity");
+        Intent data=new Intent("logo");
         data.putExtra("data",this.ObjectToJson(this.gesData));
         this.gesData.clear();
         this.lbm.sendBroadcastSync(data);
