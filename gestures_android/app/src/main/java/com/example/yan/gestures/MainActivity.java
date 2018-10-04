@@ -190,40 +190,43 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onTouchEvent(MotionEvent event){
-        Log.e("event type",String.valueOf(event.getAction()));
-        int action = event.getAction();
-        if(action==ACTION_DOWN){
-            Log.e("screen","touched");
-            Intent cmd=new Intent("MainActivity");
-            cmd.putExtra("data","start");
-            lbm.sendBroadcast(cmd);
-            if(mVelocityTracker==null){
-                mVelocityTracker = VelocityTracker.obtain();
-            }else{
-                mVelocityTracker.clear();
-            }
-            gatherSamples(event);
-        }
-        if(action==ACTION_MOVE){
-            Log.e("screen","gathering");
-            gatherSamples(event);
-        }
-        if(action==ACTION_UP){
-            Log.e("screen","sending");
-            gatherSamples(event);
-            if(sendSamples()) {
+        if(start) {
+            Log.e("event type", String.valueOf(event.getAction()));
+            int action = event.getAction();
+            if (action == ACTION_DOWN) {
+                Log.e("screen", "touched");
                 Intent cmd = new Intent("MainActivity");
-                cmd.putExtra("data", "stop");
+                cmd.putExtra("data", "start");
                 lbm.sendBroadcast(cmd);
+                if (mVelocityTracker == null) {
+                    mVelocityTracker = VelocityTracker.obtain();
+                } else {
+                    mVelocityTracker.clear();
+                }
+                gatherSamples(event);
             }
-        }
-        if(action==ACTION_CANCEL){
-            if(sendSamples()) {
-                Intent cmd = new Intent("MainActivity");
-                cmd.putExtra("data", "stop");
-                lbm.sendBroadcast(cmd);
+            if (action == ACTION_MOVE) {
+                Log.e("screen", "gathering");
+                gatherSamples(event);
             }
-            mVelocityTracker.recycle();
+            if (action == ACTION_UP) {
+                Log.e("screen", "sending");
+                gatherSamples(event);
+                if (sendSamples()) {
+                    Intent cmd = new Intent("MainActivity");
+                    cmd.putExtra("data", "stop");
+                    lbm.sendBroadcast(cmd);
+                }
+            }
+            if (action == ACTION_CANCEL) {
+                if (sendSamples()) {
+                    Intent cmd = new Intent("MainActivity");
+                    cmd.putExtra("data", "stop");
+                    lbm.sendBroadcast(cmd);
+                }
+                mVelocityTracker.recycle();
+            }
+            return true;
         }
         return true;
     }
