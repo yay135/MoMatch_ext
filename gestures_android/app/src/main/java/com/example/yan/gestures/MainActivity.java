@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Map<Integer,String[]> keyDatas = new HashMap();
     private boolean sig = true;
     private boolean start = false;
+    private TextView tex;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -114,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        TextView tex = findViewById(R.id.logo);
+        setContentView(R.layout.activity_main);
+        this.tex = findViewById(R.id.logo);
         tex.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
