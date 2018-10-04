@@ -63,7 +63,7 @@ public class netService extends Service {
             }
         });
         this.lbm=LocalBroadcastManager.getInstance(this);
-        lbm.registerReceiver(mReceiver,new IntentFilter("MainActivity"));
+        lbm.registerReceiver(mReceiver,new IntentFilter("logo"));// action could be MainActivity check MainActivity for more details.
         PowerManager pm = (PowerManager)getSystemService(POWER_SERVICE);
         //this.mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "systemService");
     }
