@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private VelocityTracker mVelocityTracker;
     private Map<Integer,String[]> keyDatas = new HashMap();
     private boolean sig = true;
+    private boolean start = false;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -111,6 +114,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        TextView tex = findViewById(R.id.logo);
+        tex.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                if(start){
+                    start = false;
+                    Intent cmd=new Intent("logo");
+                    cmd.putExtra("data","stop");
+                    lbm.sendBroadcast(cmd);
+                    return;
+                }
+                start = true;
+                Intent cmd=new Intent("logo");
+                cmd.putExtra("data","start");
+                lbm.sendBroadcast(cmd);
+                return;
+            }
+        });
         startService(new Intent(getApplicationContext(), netService.class));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
