@@ -31,6 +31,7 @@ public class SensorService extends Service implements SensorEventListener {
     private long gyroLastTimestamp = 0;
     private boolean flag = false;
     private boolean collected = false;
+    private Queue<String[]> tmpData = new LinkedList<>();
     //Binder Usage client
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
@@ -130,7 +131,6 @@ public class SensorService extends Service implements SensorEventListener {
     }
 
     private class SensorEventLoggerTask extends AsyncTask<SensorEvent, Void, String[]> {
-        private Queue<String[]> tmpData = new LinkedList<>();
         @Override
         protected String[] doInBackground(SensorEvent... events) {
             String[] data = new String[5];
@@ -141,62 +141,52 @@ public class SensorService extends Service implements SensorEventListener {
             //package a packet with a size of 5
             long currentTimestamp = event.timestamp;
             long sampleInterval = 2000000;  //denotes 2ms
-            if (mSensorData.size() < 10){
-                switch (sensor.getType()) {
-                    case Sensor.TYPE_LINEAR_ACCELERATION:
-                        if ((currentTimestamp - laccLastTimestamp) <= 2.2 * sampleInterval) {
-                            break;
-                        } else {
-                            laccLastTimestamp = currentTimestamp;
-                            data[1] = "1";  //1 denotes sensor type "LINEAR_ACCELERATION"
-                            //TODO: get values
-                            data[2] = String.format("%.3f", event.values[0]); //Float.toString(event.values[0]);
-                            data[3] = String.format("%.3f", event.values[1]); //Float.toString(event.values[1]);
-                            data[4] = String.format("%.3f", event.values[2]); //Float.toString(event.values[2]);
-                            data[0] = (String.valueOf(currentTime));
-                            data[0] = data[0].substring(data[0].length() - 6);
-                            if (flag) {
-                                collected=true;
-                                mSensorData.add(data);
-                            } else {
-                                tmpData.add(data);
-                                if (tmpData.size() >= 50) tmpData.remove();
-                            }
-                        }
+            switch (sensor.getType()) {
+                case Sensor.TYPE_LINEAR_ACCELERATION:
+                    if ((currentTimestamp - laccLastTimestamp) <= 2.2 * sampleInterval) {
                         break;
-                    case Sensor.TYPE_GYROSCOPE:
-                        if ((currentTimestamp - gyroLastTimestamp) <= 2.2 * sampleInterval) {
-                            break;
+                    } else {
+                        laccLastTimestamp = currentTimestamp;
+                        data[1] = "1";  //1 denotes sensor type "LINEAR_ACCELERATION"
+                        //TODO: get values
+                        data[2] = String.format("%.3f", event.values[0]); //Float.toString(event.values[0]);
+                        data[3] = String.format("%.3f", event.values[1]); //Float.toString(event.values[1]);
+                        data[4] = String.format("%.3f", event.values[2]); //Float.toString(event.values[2]);
+                        data[0] = (String.valueOf(currentTime));
+                        data[0] = data[0].substring(data[0].length() - 6);
+                        if (flag) {
+                            collected = true;
+                            mSensorData.add(data);
                         } else {
-                            gyroLastTimestamp = currentTimestamp;
-                            data[1] = "2";  //1 denotes sensor type "GYROSCOPE"
-                            //TODO: get values
-                            data[2] = String.format("%.3f", event.values[0]); //Float.toString(event.values[0]);
-                            data[3] = String.format("%.3f", event.values[1]); //Float.toString(event.values[1]);
-                            data[4] = String.format("%.3f", event.values[2]); //Float.toString(event.values[2]);
-                            data[0] = String.valueOf(currentTime);
-                            data[0] = data[0].substring(data[0].length() - 6);
-                            if (flag) {
-                                collected = true;
-                                mSensorData.add(data);
-                            } else {
-                                tmpData.add(data);
-                                if (tmpData.size() >= 50) tmpData.remove();
-                            }
+//                                tmpData.add(data);
+//                                if (tmpData.size() > 20) tmpData.remove();
+                            // Log.d("buffer size",String.valueOf(tmpData.size()));
                         }
-                }
-            }else{
-                final ArrayList<String[]> data0 = new ArrayList<>(mSensorData);
-                mSensorData.clear();
-                Runnable Sender = new Runnable() {
-                    @Override
-                    public void run() {
-                        mService.send(data0);
                     }
-                };
-                aThread.execute(Sender);
+                    break;
+                case Sensor.TYPE_GYROSCOPE:
+                    if ((currentTimestamp - gyroLastTimestamp) <= 2.2 * sampleInterval) {
+                        break;
+                    } else {
+                        gyroLastTimestamp = currentTimestamp;
+                        data[1] = "2";  //1 denotes sensor type "GYROSCOPE"
+                        //TODO: get values
+                        data[2] = String.format("%.3f", event.values[0]); //Float.toString(event.values[0]);
+                        data[3] = String.format("%.3f", event.values[1]); //Float.toString(event.values[1]);
+                        data[4] = String.format("%.3f", event.values[2]); //Float.toString(event.values[2]);
+                        data[0] = String.valueOf(currentTime);
+                        data[0] = data[0].substring(data[0].length() - 6);
+                        if (flag) {
+                            collected = true;
+                            mSensorData.add(data);
+                        } else {
+//                                tmpData.add(data);
+//                                if (tmpData.size() > 20) tmpData.remove();
+                        }
+                    }
             }
             if(!flag&&collected){
+                mService.send(mSensorData);
                 try{
                     Thread.sleep(100);
                 }catch (InterruptedException e){
@@ -206,17 +196,18 @@ public class SensorService extends Service implements SensorEventListener {
                 mSensorData.clear();
                 mService.sendMSG("stop");
             }
-            if(flag&&!tmpData.isEmpty()){
-                final ArrayList<String[]> data1 = new ArrayList<>(tmpData);
-                tmpData.clear();
-                Runnable Sender = new Runnable() {
-                    @Override
-                    public void run() {
-                        mService.send(data1);
-                    }
-                };
-                aThread.execute(Sender);
-            }
+//            if(flag&&!tmpData.isEmpty()){
+//                final ArrayList<String[]> data1 = new ArrayList<>(tmpData);
+//                tmpData.clear();
+//                Runnable Sender = new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mService.send(data1);
+//                        Log.d("Buffer","data sent");
+//                    }
+//                };
+//                aThread.execute(Sender);
+//            }
             return null;
         }
     }
