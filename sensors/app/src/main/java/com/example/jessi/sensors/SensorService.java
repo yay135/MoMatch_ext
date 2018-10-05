@@ -13,6 +13,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.AsyncTask;
 import android.os.IBinder;
+import android.os.PowerManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
@@ -24,6 +25,7 @@ import java.util.concurrent.Executors;
 
 
 public class SensorService extends Service implements SensorEventListener {
+    private PowerManager.WakeLock wakeLock;
     public static SensorManager mSensorManager = null;
     netService mService;
     ArrayList<String[]> mSensorData = new ArrayList<>();
@@ -78,6 +80,9 @@ public class SensorService extends Service implements SensorEventListener {
     private ExecutorService aThread = Executors.newSingleThreadExecutor();
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        PowerManager mgr = (PowerManager)this.getSystemService(Context.POWER_SERVICE);
+        wakeLock = mgr.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MyWakeLock");
+        wakeLock.acquire();
         Log.d("triggerservicetime0", Long.toString(System.currentTimeMillis()));
         Log.d("sensorService", "service Start");
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -123,6 +128,7 @@ public class SensorService extends Service implements SensorEventListener {
 
     @Override
     public void onDestroy() {
+        wakeLock.release();
         mSensorManager.unregisterListener(this);
         Intent intent1 = new Intent(this, netService.class);
         unbindService(mConnection);
@@ -186,7 +192,15 @@ public class SensorService extends Service implements SensorEventListener {
                     }
             }
             if(!flag&&collected){
-                mService.send(mSensorData);
+                for(int i=0;i<mSensorData.size();i+=100){
+                    int j = i + 100;
+                    mService.send(mSensorData.subList(i,Math.min(j,mSensorData.size())));
+                    try{
+                        Thread.sleep(10);
+                    }catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                }
                 try{
                     Thread.sleep(100);
                 }catch (InterruptedException e){

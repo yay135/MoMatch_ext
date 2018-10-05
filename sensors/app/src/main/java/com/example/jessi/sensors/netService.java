@@ -9,6 +9,7 @@ import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.IBinder;
+import android.os.PowerManager;
 import android.provider.Settings;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
@@ -18,6 +19,7 @@ import com.google.gson.GsonBuilder;
 
 
 public class netService extends Service {
+    private PowerManager.WakeLock wakeLock;
     //android id
     private String android_id;
     //Binder Usage
@@ -96,6 +98,7 @@ public class netService extends Service {
     }
     @Override
     public void onDestroy() {
+        wakeLock.release();
         mTCP.stopClient();
         trigger = false;
         super.onDestroy();
@@ -103,13 +106,16 @@ public class netService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        PowerManager mgr = (PowerManager)this.getSystemService(Context.POWER_SERVICE);
+        wakeLock = mgr.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MyWakeLock");
+        wakeLock.acquire();
         Log.d("netService", "service Start");
         CreateNewThread(mTCP);
         // sendBroadcast to mainActivity
         Intent startNotice = new Intent("NoticeMainActivity");
         startNotice.putExtra("message","start");
         LocalBroadcastManager.getInstance(this).sendBroadcast(startNotice);
-        return super.onStartCommand(intent, flags, startId);
+        return START_STICKY;
     }
 
     public void sendMSG(String msg) {
