@@ -20,12 +20,20 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.apache.commons.net.ntp.TimeInfo;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainActivity extends Activity {
     private final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 101;
     private final int MY_SECOND_PERMISSIONS_REQUEST_READ_CONTACTS = 102;
     private Button startButton;
     private Button stopButton;
     private TextView status;
+    private Long offsetValue = 0L;
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -221,8 +229,8 @@ public class MainActivity extends Activity {
                 // result of the request.
             }
         }
-        super.onResume();
         LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,new IntentFilter("NoticeMainActivity"));
         LocalBroadcastManager.getInstance(this).registerReceiver(mListener,new IntentFilter("tcpc"));
+        super.onResume();
     }
 }

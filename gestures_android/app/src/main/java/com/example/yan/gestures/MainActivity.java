@@ -16,6 +16,12 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 
+import org.apache.commons.net.ntp.TimeInfo;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean sig = true;
     private boolean start = false;
     private Button tex;
+    private Long offSet = 0L;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -93,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("key", "keyup");
         boolean sent = false;
         if (keyDatas.containsKey(keyCode)) {
-            String ss = String.valueOf(System.currentTimeMillis());
+            String ss = String.valueOf(System.currentTimeMillis()+offSet);
             ss = ss.substring(ss.length() - 6);
             keyDatas.get(keyCode)[3] = String.valueOf(ss);
             Intent data = new Intent("MainActivity");
@@ -113,6 +120,34 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return super.onKeyUp(keyCode, event);
+    }
+
+    @Override
+    protected void onResume() {
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    NTPUDPClient client = new NTPUDPClient();
+                    client.open();
+                    InetAddress hostAddr = InetAddress.getByName("time.google.com");
+                    TimeInfo info = client.getTime(hostAddr);
+                    info.computeDetails(); // compute offset/delay if not already done
+                    Long offsetValue = info.getOffset();
+                    offSet = offsetValue;
+                    Long delayValue = info.getDelay();
+                    String delay = (delayValue == null) ? "N/A" : delayValue.toString();
+                    String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
+
+                    Log.e("TNPUDP", " Roundtrip delay(ms)=" + delay
+                            + ", clock offset(ms)=" + offset); // offset in ms
+                    client.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+        super.onResume();
     }
 
     @Override
@@ -231,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
     public void gatherSamples(MotionEvent ev) {
-        long diff = System.currentTimeMillis() - SystemClock.uptimeMillis();
+        long diff = System.currentTimeMillis() - SystemClock.uptimeMillis()+offSet;
         final int historySize = ev.getHistorySize();
         final int pointerCount = ev.getPointerCount();
         this.mVelocityTracker.addMovement(ev);

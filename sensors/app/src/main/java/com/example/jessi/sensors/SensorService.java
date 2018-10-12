@@ -17,6 +17,10 @@ import android.os.PowerManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
+import org.apache.commons.net.ntp.TimeInfo;
+
+import java.io.IOException;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -34,6 +38,7 @@ public class SensorService extends Service implements SensorEventListener {
     private boolean flag = false;
     private boolean collected = false;
     private Queue<String[]> tmpData = new LinkedList<>();
+    private Long offSet = 0L;
     //Binder Usage client
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
@@ -56,7 +61,7 @@ public class SensorService extends Service implements SensorEventListener {
                 flag = true;
                 Log.e("broadcastreceiver","received start "+String.valueOf(System.currentTimeMillis()));
             }
-            if(message.equals("stop")){
+            else if(message.equals("stop")){
                 Log.e("broadcastreceiver","received stop");
                 flag = false;
                 try {
@@ -64,10 +69,11 @@ public class SensorService extends Service implements SensorEventListener {
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }
+            }else{
             }
-
         }
     };
+
     @Override
     public IBinder onBind(Intent intent) {
         return null;
@@ -75,6 +81,30 @@ public class SensorService extends Service implements SensorEventListener {
 
     @Override
     public void onCreate() {
+        new Thread(new Runnable() {
+            public void run() {
+                Long offsetValue;
+                try {
+                    NTPUDPClient client = new NTPUDPClient();
+                    client.open();
+                    InetAddress hostAddr = InetAddress.getByName("time.google.com");
+                    TimeInfo info = client.getTime(hostAddr);
+                    info.computeDetails(); // compute offset/delay if not already done
+                    offsetValue = info.getOffset();
+                    Long delayValue = info.getDelay();
+                    String delay = (delayValue == null) ? "N/A" : delayValue.toString();
+                    String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
+
+                    Log.e("TNPUDP"," Roundtrip delay(ms)=" + delay
+                            + ", clock offset(ms)=" + offset); // offset in ms
+                    client.close();
+                    offSet = offsetValue;
+                    Log.d("offSet","set to"+String.valueOf(offSet));
+                }catch(IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     private ExecutorService aThread = Executors.newSingleThreadExecutor();
@@ -130,7 +160,6 @@ public class SensorService extends Service implements SensorEventListener {
     public void onDestroy() {
         wakeLock.release();
         mSensorManager.unregisterListener(this);
-        Intent intent1 = new Intent(this, netService.class);
         unbindService(mConnection);
         //unregister listener;
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mListener);
@@ -158,7 +187,7 @@ public class SensorService extends Service implements SensorEventListener {
                         data[2] = String.format("%.3f", event.values[0]); //Float.toString(event.values[0]);
                         data[3] = String.format("%.3f", event.values[1]); //Float.toString(event.values[1]);
                         data[4] = String.format("%.3f", event.values[2]); //Float.toString(event.values[2]);
-                        data[0] = (String.valueOf(currentTime));
+                        data[0] = (String.valueOf(currentTime+offSet));
                         data[0] = data[0].substring(data[0].length() - 6);
                         if (flag) {
                             collected = true;
@@ -180,7 +209,7 @@ public class SensorService extends Service implements SensorEventListener {
                         data[2] = String.format("%.3f", event.values[0]); //Float.toString(event.values[0]);
                         data[3] = String.format("%.3f", event.values[1]); //Float.toString(event.values[1]);
                         data[4] = String.format("%.3f", event.values[2]); //Float.toString(event.values[2]);
-                        data[0] = String.valueOf(currentTime);
+                        data[0] = String.valueOf(currentTime+offSet);
                         data[0] = data[0].substring(data[0].length() - 6);
                         if (flag) {
                             collected = true;

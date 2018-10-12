@@ -17,6 +17,13 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import org.apache.commons.net.ntp.TimeInfo;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class netService extends Service {
     private PowerManager.WakeLock wakeLock;

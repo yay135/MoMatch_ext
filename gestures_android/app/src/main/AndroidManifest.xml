@@ -3,7 +3,6 @@
     package="com.example.yan.gestures">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.google.android.things.permission.SET_TIME"/>
 
     <application
         android:allowBackup="true"
