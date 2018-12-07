@@ -24,6 +24,7 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static android.view.MotionEvent.ACTION_CANCEL;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("pressed",String.valueOf(keyCode));
         boolean valid = false;
         String[] keyData = new String[4];
-        String ss = String.valueOf(System.currentTimeMillis());
+        String ss = String.valueOf(System.currentTimeMillis()+offSet);
         keyData[0] = ss.substring(ss.length()-6); keyData[1] = "9";
         switch (keyCode){
             case KeyEvent.KEYCODE_NUMPAD_0:
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             String ss = String.valueOf(System.currentTimeMillis()+offSet);
             ss = ss.substring(ss.length() - 6);
             keyDatas.get(keyCode)[3] = String.valueOf(ss);
-            Intent data = new Intent("MainActivity");
+            Intent data = new Intent("logo");
             ArrayList<String[]> tmp = new ArrayList<>();
             tmp.add(keyDatas.get(keyCode));
             data.putExtra("data", this.ObjectToJson(tmp));
@@ -265,33 +266,56 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+    List<Long> tmp = new ArrayList<>();
     public void gatherSamples(MotionEvent ev) {
         long diff = System.currentTimeMillis() - SystemClock.uptimeMillis()+offSet;
         final int historySize = ev.getHistorySize();
         final int pointerCount = ev.getPointerCount();
         this.mVelocityTracker.addMovement(ev);
         this.mVelocityTracker.computeCurrentVelocity(1000);
-//        for (int h = 0; h < historySize; h++) {
-//            for (int p = 0; p < pointerCount; p++) {
-//                String[] aGes = new String[9];
-//                String ss = String.valueOf(ev.getHistoricalEventTime(h));
-//                aGes[0] = ss.substring(ss.length()-6);
-//                aGes[1] = String.valueOf(ev.getPointerId(p));
-//                aGes[2] = String.valueOf(ev.getHistoricalX(p,h));
-//                aGes[3] = String.valueOf(ev.getHistoricalY(p,h));
-//                aGes[4] = String.valueOf(ev.getHistoricalPressure(p,h));
-//                aGes[5] = String.valueOf(ev.getHistoricalSize(p,h));
-//                aGes[6] = "0.0";
-//                aGes[7] = "0.0";
-//                aGes[8] = String.valueOf(ev.getHistoricalOrientation(p,h));
-//                this.gesData.add(aGes);
-//            }
-//        }
+        for (int h = 0; h < historySize; h++) {
+            for (int p = 0; p < pointerCount; p++) {
+                Float x = ev.getHistoricalX(p,h);
+                long xTrace = x.longValue();
+                if(tmp.size()>2){
+                    long last0 = tmp.get(tmp.size()-1);long last1 = tmp.get(tmp.size()-2);
+                    if((xTrace- last0)*(last0-last1)<=0){
+                        String[] aGes = new String[9];
+                        String ss = String.valueOf(ev.getHistoricalEventTime(h)+diff);
+                        aGes[0] = ss.substring(ss.length()-6);
+                        aGes[1] = String.valueOf(ev.getPointerId(p))+String.valueOf(9999);
+                        aGes[2] = String.valueOf(ev.getHistoricalX(p,h));
+                        aGes[3] = String.valueOf(ev.getHistoricalY(p,h));
+                        aGes[4] = String.valueOf(ev.getHistoricalPressure(p,h));
+                        aGes[5] = String.valueOf(ev.getHistoricalSize(p,h));
+                        aGes[6] = "0.0";
+                        aGes[7] = "0.0";
+                        aGes[8] = String.valueOf(ev.getHistoricalOrientation(p,h));
+                        this.gesData.add(aGes);
+                    }
+                }
+                tmp.add(xTrace);
+            }
+        }
         for (int p = 0; p < pointerCount; p++) {
+            boolean flag = false;
+            Float x = ev.getX(p);
+            long xTrace = x.longValue();
+            if(tmp.size()>2){
+                long last0 = tmp.get(tmp.size()-1);long last1 = tmp.get(tmp.size()-2);
+                if((xTrace- last0)*(last0-last1)<=0){
+                    flag = true;
+                }
+            }
+            tmp.add(xTrace);
             String[] aGes = new String[9];
             String ss = String.valueOf(ev.getEventTime()+diff);
             aGes[0] = ss.substring(ss.length()-6);
-            aGes[1] = String.valueOf(ev.getPointerId(p));
+            if(flag) {
+                aGes[1] = String.valueOf(ev.getPointerId(p))+String.valueOf(99999);
+            }else{
+                aGes[1] = String.valueOf(ev.getPointerId(p));
+            }
             aGes[2] = String.valueOf(ev.getX(p));
             aGes[3] = String.valueOf(ev.getY(p));
             aGes[4] = String.valueOf(ev.getPressure());

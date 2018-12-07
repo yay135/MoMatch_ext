@@ -7,7 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="840fba1d-2a84-4d5d-9a22-503913738529" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../gestures_android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../gestures_android/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/TCPc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensors/app/src/main/java/com/example/jessi/sensors/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sensors/app/src/main/java/com/example/jessi/sensors/SensorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sensors/app/src/main/java/com/example/jessi/sensors/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sensors/app/src/main/java/com/example/jessi/sensors/TCPc.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,14 +51,18 @@
     <session id="891267473">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.15" value="1" />
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.17" value="4" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -79,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-850">
-              <caret line="118" column="41" lean-forward="true" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+            <state relative-caret-position="17">
+              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,8 +135,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,7 +158,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -205,16 +214,25 @@
       <workItem from="1538455474930" duration="44000" />
       <workItem from="1538686187705" duration="4402000" />
       <workItem from="1538702893343" duration="6962000" />
+      <workItem from="1539318975670" duration="2712000" />
+      <workItem from="1539364365755" duration="2007000" />
+      <workItem from="1539371613689" duration="14000" />
+      <workItem from="1542038602067" duration="756000" />
+      <workItem from="1543375694545" duration="4857000" />
+      <workItem from="1543431372086" duration="3336000" />
+      <workItem from="1543445137073" duration="55000" />
+      <workItem from="1543696885929" duration="5176000" />
+      <workItem from="1543978287189" duration="1756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42521000" />
+    <option name="totallyTimeSpent" value="63190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28517398" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3267776" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -223,7 +241,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35409835" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -253,8 +271,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="118" column="41" lean-forward="true" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+        <state relative-caret-position="17">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
