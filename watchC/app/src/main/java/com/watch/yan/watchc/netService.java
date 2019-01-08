@@ -91,6 +91,11 @@ public class netService extends Service {
                         }
                     sendMSG("q");
                 }
+                if (message.equals("cali")){
+                    Intent comm = new Intent("TimeCali");
+                    comm.putExtra("cali","cal");
+                    lbm.sendBroadcast(comm);
+                }
             }
         });
     }

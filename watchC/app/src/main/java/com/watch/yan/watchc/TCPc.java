@@ -26,7 +26,7 @@ import java.util.TimerTask;
 
 /*TCPclient from the Internet https://stackoverflow.com/questions/38162775/really-simple-tcp-client*/
 public class TCPc implements Runnable{
-    public static final String SERVER_IP = "192.168.0.171";//"10.34.25.234";//iPhone address "172.20.10.8"//1207 address: "129.252.131.137"
+    public static final String SERVER_IP = "192.168.0.126";//"10.34.25.234";//iPhone address "172.20.10.8"//1207 address: "129.252.131.137"
     public static final int SERVER_PORT = 8888;
     public static final String TAG = "TCPClient";
     // message to send to the server
@@ -145,32 +145,32 @@ public class TCPc implements Runnable{
                                 while (listen) {
                                     Thread.sleep(1);
                                     mServerMessage = mBufferIn.readLine();
-                                    int rssi0 = wifi.getRssi();
-                                    int level0 = fm.calculateSignalLevel(rssi0,5);
-                                    if(level0<1){
-                                        Log.e("Socket","low rssi,disconnecting");
-                                        lbm.sendBroadcast(disconnection);
-                                        disconnect();
-                                    }
+//                                    int rssi0 = wifi.getRssi();
+//                                    int level0 = fm.calculateSignalLevel(rssi0,5);
+//                                    if(level0<1){
+//                                        Log.e("Socket","low rssi,disconnecting");
+//                                        lbm.sendBroadcast(disconnection);
+//                                        disconnect();
+//                                    }
 
                                     if (mServerMessage != null && mMessageListener != null) {
-                                        if (mServerMessage.equals("time")) {
-                                            timeReceived++;
-                                            Log.e("Broadcast","sent connected");
-                                            lbm.sendBroadcast(connection);
-                                            timer.schedule(new TimerTask() {
-                                                private int timeCount = timeReceived;
-                                                @Override
-                                                public void run() {
-                                                   if(this.timeCount==TCPc.timeReceived){
-                                                       Log.e("Socket","timeout,disconnecting");
-                                                       lbm.sendBroadcast(disconnection);
-                                                       disconnect();
-                                                   }
-                                                }
-                                            },1210000);
-
-                                        }
+//                                        if (mServerMessage.equals("time")) {
+//                                            timeReceived++;
+//                                            Log.e("Broadcast","sent connected");
+//                                            lbm.sendBroadcast(connection);
+//                                            timer.schedule(new TimerTask() {
+//                                                private int timeCount = timeReceived;
+//                                                @Override
+//                                                public void run() {
+//                                                   if(this.timeCount==TCPc.timeReceived){
+//                                                       Log.e("Socket","timeout,disconnecting");
+//                                                       lbm.sendBroadcast(disconnection);
+//                                                       disconnect();
+//                                                   }
+//                                                }
+//                                            },1210000);
+//
+//                                        }
                                         //call the method messageReceived from MyActivity class
                                         mMessageListener.messageReceived(mServerMessage);
                                     }

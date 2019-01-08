@@ -74,6 +74,13 @@ public class MainActivity extends WearableActivity {
         }
     };
 
+    private BroadcastReceiver caliListener = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String message = intent.getStringExtra("showCali");
+            status.setText(message);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,11 +135,13 @@ public class MainActivity extends WearableActivity {
         super.onPause();
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mListener);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(caliListener);
     }
     @Override
     public void onResume(){
         super.onResume();
         LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,new IntentFilter("NoticeMainActivity"));
         LocalBroadcastManager.getInstance(this).registerReceiver(mListener,new IntentFilter("tcpc"));
+        LocalBroadcastManager.getInstance(this).registerReceiver(caliListener,new IntentFilter("sensorService"));
     }
 }

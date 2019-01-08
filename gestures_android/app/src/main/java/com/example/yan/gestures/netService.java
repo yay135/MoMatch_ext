@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Binder;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.os.SystemClock;
@@ -12,11 +13,15 @@ import android.provider.Settings;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
+import com.google.gson.Gson;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
 public class netService extends Service {
+    //Binder Usage
+    private final IBinder mBinder = new LocalBinder();
+
     private String android_id;
     LocalBroadcastManager lbm;
     BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -34,8 +39,24 @@ public class netService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+        return mBinder;
+    }
+
+    public void sendMSG(String msg) {
+        Log.e("messages",msg);
+        mTCP.sendMessage(msg);
+    }
+
+    public String ObjectToJson(Object m) {
+        Gson gson = new Gson();
+        String json = gson.toJson(m);
+        return json;
+        //return json.substring(1,json.length()-1);
+    }
+
+
+    public void send(Object m) {
+        sendMSG(ObjectToJson(m));
     }
 
     @Override
@@ -82,5 +103,12 @@ public class netService extends Service {
     public void onDestroy() {
         mTCP.stopClient();
         super.onDestroy();
+    }
+
+    //Binder Usage
+    public class LocalBinder extends Binder {
+        netService getService() {
+            return netService.this;
+        }
     }
 }

@@ -28,8 +28,8 @@ public class Main {
             InetAddress myNetAddress = null;
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     System.in));
-            System.out.println("net address not found, specify ipAddress manually:");
-            String address = reader.readLine();
+            //System.out.println("net address not found, specify ipAddress manually:");
+            String address = "192.168.0.126";
             myNetAddress = InetAddress.getByName(address);
             ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
             List<Socket> sockets = new ArrayList<>();
@@ -115,8 +115,8 @@ public class Main {
             };
             BufferedReader r = new BufferedReader(new InputStreamReader(
                     System.in));
-            System.out.println("input directory:");
-            String s = reader.readLine();
+            //System.out.println("input directory:");
+            String s = "c:\\Users\\yay13\\Sensordata";
             final String pa = s;
             Runnable writer = new Runnable() {
                 @Override

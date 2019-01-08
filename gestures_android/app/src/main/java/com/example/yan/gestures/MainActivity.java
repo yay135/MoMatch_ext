@@ -2,6 +2,7 @@ package com.example.yan.gestures;
 
 import android.content.Intent;
 import android.gesture.GestureOverlayView;
+import android.graphics.Color;
 import android.os.SystemClock;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean sig = true;
     private boolean start = false;
     private Button tex;
-    private Long offSet = 0L;
+    public static Long offSet = 0L;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -125,28 +126,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        new Thread(new Runnable() {
-            public void run() {
-                try {
-                    NTPUDPClient client = new NTPUDPClient();
-                    client.open();
-                    InetAddress hostAddr = InetAddress.getByName("time.google.com");
-                    TimeInfo info = client.getTime(hostAddr);
-                    info.computeDetails(); // compute offset/delay if not already done
-                    Long offsetValue = info.getOffset();
-                    offSet = offsetValue;
-                    Long delayValue = info.getDelay();
-                    String delay = (delayValue == null) ? "N/A" : delayValue.toString();
-                    String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
-
-                    Log.e("TNPUDP", " Roundtrip delay(ms)=" + delay
-                            + ", clock offset(ms)=" + offset); // offset in ms
-                    client.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
 
         super.onResume();
     }
@@ -164,17 +143,51 @@ public class MainActivity extends AppCompatActivity {
                     Intent cmd=new Intent("logo");
                     cmd.putExtra("data","stop");
                     lbm.sendBroadcast(cmd);
+//                    Intent fg = new Intent("tcpc");
+//                    fg.putExtra("sig","stop");
+//                    lbm.sendBroadcast(fg);
+                    tex.setBackgroundColor(Color.WHITE);
                     return;
                 }
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            NTPUDPClient client = new NTPUDPClient();
+                            client.open();
+                            InetAddress hostAddr = InetAddress.getByName("time.google.com");
+                            TimeInfo info = client.getTime(hostAddr);
+                            info.computeDetails(); // compute offset/delay if not already done
+                            Long offsetValue = info.getOffset();
+                            offSet = offsetValue;
+                            Long delayValue = info.getDelay();
+                            String delay = (delayValue == null) ? "N/A" : delayValue.toString();
+                            String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
+
+                            Log.e("TNPUDP", " Roundtrip delay(ms)=" + delay
+                                    + ", clock offset(ms)=" + offset); // offset in ms
+                            client.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+                try {
+                    Thread.sleep(100);
+                }catch (InterruptedException e){}
                 start = true;
                 Log.e("button","clicked0");
                 Intent cmd=new Intent("logo");
                 cmd.putExtra("data","start");
                 lbm.sendBroadcast(cmd);
+//                Intent fg = new Intent("tcpc");
+//                fg.putExtra("sig","start");
+//                lbm.sendBroadcast(fg);
+                tex.setBackgroundColor(Color.RED);
                 return;
             }
         });
         startService(new Intent(getApplicationContext(), netService.class));
+        startService(new Intent(getApplicationContext(), SensorService.class));
         super.onCreate(savedInstanceState);
 //        GestureOverlayView geov = findViewById(R.id.gestures);
 //        geov.setGestureVisible(true);
@@ -347,6 +360,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         stopService(new Intent(getApplicationContext(), netService.class));
+        stopService(new Intent(getApplicationContext(), SensorService.class));
         super.onDestroy();
     }
 }
