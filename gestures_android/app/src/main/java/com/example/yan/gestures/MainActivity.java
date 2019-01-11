@@ -1,6 +1,9 @@
 package com.example.yan.gestures;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.gesture.GestureOverlayView;
 import android.graphics.Color;
 import android.os.SystemClock;
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean sig = true;
     private boolean start = false;
     private Button tex;
+    private TextView tim;
     public static Long offSet = 0L;
 
     @Override
@@ -96,6 +100,37 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
+    private BroadcastReceiver cListener = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String message = intent.getStringExtra("cali");
+            if(message.equals("cal")){
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            NTPUDPClient client = new NTPUDPClient();
+                            client.open();
+                            InetAddress hostAddr = InetAddress.getByName("time.google.com");
+                            TimeInfo info = client.getTime(hostAddr);
+                            info.computeDetails(); // compute offset/delay if not already done
+                            Long offsetValue = info.getOffset();
+                            offSet = offsetValue;
+                            Long delayValue = info.getDelay();
+                            String delay = (delayValue == null) ? "N/A" : delayValue.toString();
+                            String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
+
+                            Log.e("TNPUDP", " Roundtrip delay(ms)=" + delay
+                                    + ", clock offset(ms)=" + offset); // offset in ms
+                            client.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+                tim.setText(offSet+"ms");
+            }
+        }
+    };
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -134,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_main);
         this.tex = findViewById(R.id.logo);
+        this.tim = findViewById(R.id.textView);
         tex.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -149,28 +185,28 @@ public class MainActivity extends AppCompatActivity {
                     tex.setBackgroundColor(Color.WHITE);
                     return;
                 }
-                new Thread(new Runnable() {
-                    public void run() {
-                        try {
-                            NTPUDPClient client = new NTPUDPClient();
-                            client.open();
-                            InetAddress hostAddr = InetAddress.getByName("time.google.com");
-                            TimeInfo info = client.getTime(hostAddr);
-                            info.computeDetails(); // compute offset/delay if not already done
-                            Long offsetValue = info.getOffset();
-                            offSet = offsetValue;
-                            Long delayValue = info.getDelay();
-                            String delay = (delayValue == null) ? "N/A" : delayValue.toString();
-                            String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
-
-                            Log.e("TNPUDP", " Roundtrip delay(ms)=" + delay
-                                    + ", clock offset(ms)=" + offset); // offset in ms
-                            client.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }).start();
+//                new Thread(new Runnable() {
+//                    public void run() {
+//                        try {
+//                            NTPUDPClient client = new NTPUDPClient();
+//                            client.open();
+//                            InetAddress hostAddr = InetAddress.getByName("time.google.com");
+//                            TimeInfo info = client.getTime(hostAddr);
+//                            info.computeDetails(); // compute offset/delay if not already done
+//                            Long offsetValue = info.getOffset();
+//                            offSet = offsetValue;
+//                            Long delayValue = info.getDelay();
+//                            String delay = (delayValue == null) ? "N/A" : delayValue.toString();
+//                            String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
+//
+//                            Log.e("TNPUDP", " Roundtrip delay(ms)=" + delay
+//                                    + ", clock offset(ms)=" + offset); // offset in ms
+//                            client.close();
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }).start();
                 try {
                     Thread.sleep(100);
                 }catch (InterruptedException e){}
@@ -236,6 +272,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
         this.lbm = LocalBroadcastManager.getInstance(this);
+        lbm.registerReceiver(cListener,new IntentFilter("TimeCali"));
     }
     @Override
     public boolean onTouchEvent(MotionEvent event){

@@ -10,10 +10,7 @@ import java.lang.reflect.Type;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -94,6 +91,7 @@ public class Main {
             BufferedReader reader0 = (BufferedReader) communicators.get(sockets.get(0)).get("reader");
             BufferedReader reader1 = (BufferedReader) communicators.get(sockets.get(1)).get("reader");
             PrintWriter writer1 = (PrintWriter) communicators.get(sockets.get(1)).get("writer");
+            PrintWriter writer0 = (PrintWriter) communicators.get(sockets.get(0)).get("writer");
             Runnable Daw = new Runnable() {
                 @Override
                 public void run() {
@@ -162,6 +160,22 @@ public class Main {
             };
             ExecutorService anThread = Executors.newSingleThreadExecutor();
             anThread.execute(writer);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while(true) {
+                        Scanner scanner = new Scanner(System.in);
+                        String input = scanner.nextLine();
+                        if (input.equals("c")) {
+                            writer0.println("cali");
+                            writer1.println("cali");
+                            writer0.flush();
+                            writer1.flush();
+                            //System.out.println(input);
+                        }
+                    }
+                }
+            }).start();
             while (true) {
                 try {
                     Thread.sleep(1);

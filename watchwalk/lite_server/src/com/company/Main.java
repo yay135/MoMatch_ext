@@ -152,6 +152,7 @@ public class Main {
                 }
                 String cmd = reader0.readLine();
                 if(cmd.equals("s")){
+                    count++;
                     SensorData sd = new SensorData();
                     writer0.println("s");
                     writer0.flush();

@@ -82,6 +82,11 @@ public class netService extends Service {
                     }
                     mTCP.sendMessage("q");
                 }
+                if(message.equals("cali")){
+                    Intent comm = new Intent("TimeCali");
+                    comm.putExtra("cali","cal");
+                    lbm.sendBroadcast(comm);
+                }
             }
         });
         this.lbm=LocalBroadcastManager.getInstance(this);
