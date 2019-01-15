@@ -30,10 +30,8 @@ public class Main {
             InetAddress myNetAddress = null;
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     System.in));
-            //System.out.println("net address not found, specify ipAddress manually:");
-
-//            String address = "192.168.0.126";
-            String address = "192.168.0.171";
+            System.out.println("specify ipAddress:");
+            String address = reader.readLine();
 
             myNetAddress = InetAddress.getByName(address);
             ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
@@ -95,16 +93,14 @@ public class Main {
                 }
                 timeDiff.put(client,sum/8);
             }
-            System.out.println("Successfully connected with 2 devices");
+            System.out.println("Successfully connected with watch");
             BufferedReader reader0 = (BufferedReader) communicators.get(sockets.get(0)).get("reader");
             PrintWriter writer0 = (PrintWriter) communicators.get(sockets.get(0)).get("writer");
-//            BufferedReader r = new BufferedReader(new InputStreamReader(
-//                    System.in));
-            //System.out.println("input directory:");
+            BufferedReader r = new BufferedReader(new InputStreamReader(
+                    System.in));
+            System.out.println("specify directory:");
 
-//            String s = "c:\\Users\\yay13\\Sensordata";
-            String s = "/home/xiaopeng/sensor_data";
-            
+            String s = r.readLine();
             final String pa = s;
             Runnable writer = new Runnable() {
                 @Override

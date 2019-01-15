@@ -25,10 +25,9 @@ public class Main {
             InetAddress myNetAddress = null;
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     System.in));
-            //System.out.println("net address not found, specify ipAddress manually:");
+            System.out.println("specify ipAddress:");
 
-//            String address = "192.168.0.126";
-            String address = "192.168.0.171";
+            String address = reader.readLine();
 
             myNetAddress = InetAddress.getByName(address);
             ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
@@ -116,12 +115,10 @@ public class Main {
             };
             BufferedReader r = new BufferedReader(new InputStreamReader(
                     System.in));
-            //System.out.println("input directory:");
+            System.out.println("specify directory:");
+            String dir = r.readLine();
 
-//            String s = "c:\\Users\\yay13\\Sensordata";
-            String s = "/home/xiaopeng/sensor_data";
-
-            final String pa = s;
+            final String pa = dir;
             Runnable writer = new Runnable() {
                 @Override
                 public void run() {
