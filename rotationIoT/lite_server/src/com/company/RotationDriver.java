@@ -1,75 +1,100 @@
 package com.company;
 
-import javax.security.auth.login.Configuration;
 import javax.usb.*;
-import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class RotationDriver {
-
-    public static void getRotationData() {
-	// write your code here
+    private boolean exit = false;
+    private ArrayList<String[]> rotationData = new ArrayList<>();
+    private long offSet = 0;
+    private UsbInterface iface = null;
+    private UsbPipe pipe = null;
+    public RotationDriver(short vid, short pid){
         try {
             //init virtual usb hub
             usbDriver driver = new usbDriver();
             final UsbServices services = UsbHostManager.getUsbServices();
             UsbHub hub = services.getRootUsbHub();
             // find desired usb device
-            short vendorId = 9025;
-            short productId = 18509;
-            UsbDevice device = driver.findDevice(hub,vendorId,productId);
+            short vendorId = vid;
+            short productId = pid;
+            UsbDevice device = driver.findDevice(hub, vendorId, productId);
             // reads the current configuration number from a device by using a control request
-            UsbControlIrp irp = device.createUsbControlIrp(
-                    (byte) (UsbConst.REQUESTTYPE_DIRECTION_IN
-                            | UsbConst.REQUESTTYPE_TYPE_STANDARD
-                            | UsbConst.REQUESTTYPE_RECIPIENT_DEVICE),
-                    UsbConst.REQUEST_GET_CONFIGURATION,
-                    (short) 0,
-                    (short) 0
-            );
-            irp.setData(new byte[1]);
-            device.syncSubmit(irp);
-            System.out.println(Arrays.toString(irp.getData()));
+//            UsbControlIrp irp = device.createUsbControlIrp(
+//                    (byte) (UsbConst.REQUESTTYPE_DIRECTION_IN
+//                            | UsbConst.REQUESTTYPE_TYPE_STANDARD
+//                            | UsbConst.REQUESTTYPE_RECIPIENT_DEVICE),
+//                    UsbConst.REQUEST_GET_CONFIGURATION,
+//                    (short) 0,
+//                    (short) 0
+//            );
+//            irp.setData(new byte[1]);
+//            device.syncSubmit(irp);
+//            System.out.println(Arrays.toString(irp.getData()));
             // Use interface to communicate with devices
             UsbConfiguration configuration = device.getActiveUsbConfiguration();
-            UsbInterface iface = configuration.getUsbInterface((byte) 02);
-            System.out.println(iface);
-            iface.claim(new UsbInterfacePolicy()
-            {
+            iface = configuration.getUsbInterface((byte) 02);
+            iface.claim(new UsbInterfacePolicy() {
                 @Override
-                public boolean forceClaim(UsbInterface usbInterface)
-                {
+                public boolean forceClaim(UsbInterface usbInterface) {
                     return true;
                 }
             });
-            try
-            {
-                boolean exit = false;
-                UsbEndpoint endpoint = iface.getUsbEndpoint((byte) 0x84);
-                UsbPipe pipe = endpoint.getUsbPipe();
-                while(!exit) {
-                    try {
-                        Thread.sleep(1);
-                        pipe.open();
-                        byte[] data = new byte[16];
-                        pipe.syncSubmit(data);
-
-                    }catch (Exception e){
-                        e.printStackTrace();
-                        exit = true;
-                    }
-                    finally {
-                        pipe.close();
-                    }
-                }
-            }
-            finally
-            {
-                iface.release();
-            }
-        }catch(UsbException e){
+            UsbEndpoint endpoint = iface.getUsbEndpoint((byte) 0x84);
+            pipe = endpoint.getUsbPipe();
+            pipe.open();
+        }catch (Exception e){
             e.printStackTrace();
+        }
+    }
+    public void startRotation() {
+        exit = false;
+        rotationData.clear();
+        byte[] data = new byte[16];
+        while (!exit) {
+            try {
+                pipe.syncSubmit(data);
+                String[] res = new String[2];
+                res[0] = String.valueOf(System.currentTimeMillis() + offSet);
+                res[1] = String.valueOf(data[1]);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(!res[1].equals("0")) System.out.println(res[1].equals("-23")?"right":"left");
+                    }
+                }).start();
+                this.rotationData.add(res);
+            } catch (Exception e) {
+                e.printStackTrace();
+                exit = true;
+            }
+        }
+    }
+    public void stopRotation(){
+        this.exit = true;
+    }
+    public ArrayList<String[]> getRotationData() {
+        return new ArrayList<>(rotationData);
+    }
+    public void updateOffSet(long offSet){
+        this.offSet = offSet;
+    }
+    public void releaseAndClosePipe(){
+        while(this.pipe.isActive()){
+            System.out.println("pipe and interface are still busy ...");
+            try{
+                Thread.sleep(1000);
+            }catch (Exception e){}
+        }
+        try {
+            this.iface.release();
+            this.pipe.close();
+            System.out.println("pipe and interface closed.");
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("pipe and interface not closed!c");
         }
     }
 }

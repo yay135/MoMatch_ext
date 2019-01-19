@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.opencsv.CSVWriter;
+import org.apache.commons.net.ntp.TimeInfo;
+import sun.rmi.runtime.Log;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -22,6 +24,8 @@ import java.util.Scanner;
 
 public class Main {
     private static int count = 0;
+    private static long OFFSET = 0;
+    private static boolean exit =false;
     public static void main(String[] args) {
         try {
             SensorData spData = new SensorData();
@@ -38,7 +42,7 @@ public class Main {
             Map<Socket, Map<String,Object>> communicators = new HashMap<>();
             Map<Socket,Long> timeDiff = new HashMap();
             ExecutorService aThread = Executors.newSingleThreadExecutor();
-            while (sockets.size() < 2) {
+            while (sockets.size() < 1) {
                 System.out.println("Listening for "+sockets.size()+1+"st device");
                 Socket client = server.accept();
                 String clientAddress = client.getInetAddress().getHostAddress();
@@ -92,10 +96,10 @@ public class Main {
                 }
                 timeDiff.put(client,sum/8);
             }
-            System.out.println("Successfully connected with 2 devices");
+            System.out.println("Successfully connected with watch");
             BufferedReader reader0 = (BufferedReader) communicators.get(sockets.get(0)).get("reader");
-            BufferedReader reader1 = (BufferedReader) communicators.get(sockets.get(1)).get("reader");
-            PrintWriter writer1 = (PrintWriter) communicators.get(sockets.get(1)).get("writer");
+           // BufferedReader reader1 = (BufferedReader) communicators.get(sockets.get(1)).get("reader");
+           // PrintWriter writer1 = (PrintWriter) communicators.get(sockets.get(1)).get("writer");
             PrintWriter writer0 = (PrintWriter) communicators.get(sockets.get(0)).get("writer");
 //            Runnable Daw = new Runnable() {
 //                @Override
@@ -166,7 +170,10 @@ public class Main {
             ExecutorService anThread = Executors.newSingleThreadExecutor();
             anThread.execute(writer);
             boolean nextCmd = false;
-            while (true) {
+            short vendorId = 9025;
+            short productId = 18509;
+            RotationDriver driver = new RotationDriver(vendorId,productId);
+            while (!exit) {
                 try {
                     Thread.sleep(1);
                 } catch (InterruptedException e) {
@@ -174,34 +181,51 @@ public class Main {
                 Scanner scanner = new Scanner(System.in);
                 String input = scanner.nextLine();
                 if (input.equals("c")) {
-                    writer1.println("cali");
-                    writer1.flush();
+                    //writer1.println("cali");
+                    //writer1.flush();
+                    OFFSET = NTPcal();
+                    driver.updateOffSet(OFFSET);
                     writer0.println("cali");
                     writer0.flush();
-                } else{
+                }else if(input.equals("q")){
+                    exit = true;
+                }
+                else{
                     nextCmd = nextCmd ? false : true;
                     if (nextCmd) {
                         count += 1;
-                        writer1.println("s");
-                        writer1.flush();
+                        //writer1.println("s");
+                        //writer1.flush();
+                        System.out.println("start rotation log");
+                        new Thread(new Runnable(){
+                            @Override
+                            public void run() {
+                                driver.startRotation();
+                            }
+                        }).start();
                         writer0.println("s");
                         writer0.flush();
                     } else {
-                        writer1.println("e");
-                        writer1.flush();
+                        //writer1.println("e");
+                        //writer1.flush();
                         writer0.println("e");
                         writer0.flush();
+                        driver.stopRotation();
+                        System.out.println("stop rotation log");
+                        SensorData sensordata = new SensorData();
+                        sensordata.data = driver.getRotationData();
+                        writerToDisk(count,sensordata,1,"0.0.0.0",0L,"RO","afwerafda",que);
                         new Thread(new Runnable() {
                             @Override
                             public void run() {
                                 while (true) {
                                     try {
-                                        String data = reader1.readLine();
+                                        String data = reader0.readLine();
                                         if (data.equals("stop")) {
                                             SensorData tmp = new SensorData();
                                             tmp.data = new ArrayList<>(swData.data);
                                             swData.data.clear();
-                                            writerToDisk(count, tmp, 1, sockets.get(1).getInetAddress().toString(), timeDiff.get(sockets.get(1)), "sw", "owijeof45", que);
+                                            writerToDisk(count, tmp, 0, sockets.get(0).getInetAddress().toString(), timeDiff.get(sockets.get(0)), "sw", "owijeof45", que);
                                             swData.data.clear();
                                             break;
                                         }
@@ -212,21 +236,11 @@ public class Main {
                                 }
                             }
                         }).start();
-                        while (true) {
-                            String data0 = reader0.readLine();
-                            if (data0.equals("stop")) {
-                                int c = count;
-                                SensorData tmp = new SensorData();
-                                tmp.data = new ArrayList<>(spData.data);
-                                spData.data.clear();
-                                writerToDisk(count, tmp, 1, sockets.get(0).getInetAddress().toString(), timeDiff.get(sockets.get(0)), "sp", "owijeof45", que);
-                                break;
-                            }
-                            spData.write(data0);
-                        }
                     }
                 }
             }
+            driver.stopRotation();
+            driver.releaseAndClosePipe();
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
@@ -240,6 +254,25 @@ public class Main {
                 break;
             }
         }
+    }
+    private static long NTPcal(){
+        Long offSet = 0L;
+        try {
+            NTPUDPClient client = new NTPUDPClient();
+            client.open();
+            InetAddress hostAddr = InetAddress.getByName("time.google.com");
+            TimeInfo info = client.getTime(hostAddr);
+            info.computeDetails(); // compute offset/delay if not already done
+            Long offsetValue= info.getOffset();
+            offSet = offsetValue;
+            Long delayValue = info.getDelay();
+            String delay = (delayValue == null) ? "N/A" : delayValue.toString();
+            String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
+            client.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return offSet;
     }
 }
 class SensorData {
