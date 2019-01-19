@@ -35,7 +35,7 @@ public class Main {
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     System.in));
             //System.out.println("net address not found, specify ipAddress manually:");
-            String address = "192.168.0.126";
+            String address = "192.168.0.171";
             myNetAddress = InetAddress.getByName(address);
             ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
             List<Socket> sockets = new ArrayList<>();
