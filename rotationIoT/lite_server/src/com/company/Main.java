@@ -21,7 +21,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.Scanner;
 
-
 public class Main {
     private static int count = 0;
     private static long OFFSET = 0;
@@ -101,25 +100,6 @@ public class Main {
            // BufferedReader reader1 = (BufferedReader) communicators.get(sockets.get(1)).get("reader");
            // PrintWriter writer1 = (PrintWriter) communicators.get(sockets.get(1)).get("writer");
             PrintWriter writer0 = (PrintWriter) communicators.get(sockets.get(0)).get("writer");
-//            Runnable Daw = new Runnable() {
-//                @Override
-//                public void run() {
-//                    while (true) {
-//                        try {
-//                            String data = reader1.readLine();
-//                            if (data.equals("stop")) {
-//                                SensorData tmp = new SensorData();tmp.data = new ArrayList<>(swData.data);swData.data.clear();
-//                                writerToDisk(count,tmp,1,sockets.get(1).getInetAddress().toString(), timeDiff.get(sockets.get(1)),"sw","owijeof45",que);
-//                                swData.data.clear();
-//                                break;
-//                            }
-//                            swData.write(data);
-//                        } catch (IOException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                }
-//            };
             BufferedReader r = new BufferedReader(new InputStreamReader(
                     System.in));
             System.out.println("Specify data output directory:");
@@ -193,22 +173,25 @@ public class Main {
                 }
                 else{
                     nextCmd = nextCmd ? false : true;
+                    ExecutorService rt = Executors.newSingleThreadExecutor();
                     if (nextCmd) {
                         count += 1;
                         //writer1.println("s");
                         //writer1.flush();
                         System.out.println("start rotation log...");
-                        new Thread(new Runnable(){
+                        Runnable runnable = new Runnable(){
                             @Override
                             public void run() {
                                 driver.startRotation();
                             }
-                        }).start();
+                        };
+                        rt.execute(runnable);
                         writer0.println("s");
                         writer0.flush();
                     } else {
                         //writer1.println("e");
                         //writer1.flush();
+                        rt.shutdownNow();
                         writer0.println("e");
                         writer0.flush();
                         driver.stopRotation();

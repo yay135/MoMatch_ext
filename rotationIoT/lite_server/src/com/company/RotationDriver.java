@@ -1,13 +1,15 @@
 package com.company;
 
+import java.util.concurrent.CopyOnWriteArrayList;
+
 import javax.usb.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+
 
 public class RotationDriver {
     private boolean exit = false;
-    private ArrayList<String[]> rotationData = new ArrayList<>();
+    private List<String[]> rotationData = new CopyOnWriteArrayList<>();
     private long offSet = 0;
     private UsbInterface iface = null;
     private UsbPipe pipe = null;
@@ -21,18 +23,7 @@ public class RotationDriver {
             short vendorId = vid;
             short productId = pid;
             UsbDevice device = driver.findDevice(hub, vendorId, productId);
-            // reads the current configuration number from a device by using a control request
-//            UsbControlIrp irp = device.createUsbControlIrp(
-//                    (byte) (UsbConst.REQUESTTYPE_DIRECTION_IN
-//                            | UsbConst.REQUESTTYPE_TYPE_STANDARD
-//                            | UsbConst.REQUESTTYPE_RECIPIENT_DEVICE),
-//                    UsbConst.REQUEST_GET_CONFIGURATION,
-//                    (short) 0,
-//                    (short) 0
-//            );
-//            irp.setData(new byte[1]);
-//            device.syncSubmit(irp);
-//            System.out.println(Arrays.toString(irp.getData()));
+            //driver.getirp(device);
             // Use interface to communicate with devices
             UsbConfiguration configuration = device.getActiveUsbConfiguration();
             iface = configuration.getUsbInterface((byte) 02);
@@ -62,10 +53,10 @@ public class RotationDriver {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        if(!res[1].equals("0")) System.out.println(res[1].equals("-23")?"right":"left");
+                        if(!res[1].equals("0")&&!exit) System.out.println(res[1].equals("-23")?"RIGHT":"LEFT");
                     }
                 }).start();
-                this.rotationData.add(res);
+                if(!exit) this.rotationData.add(res);
             } catch (Exception e) {
                 e.printStackTrace();
                 exit = true;
@@ -83,23 +74,47 @@ public class RotationDriver {
     }
     public void releaseAndClosePipe(){
         while(this.pipe.isActive()){
-            System.out.println("pipe and interface are still busy ...");
-            try{
-                Thread.sleep(1000);
-            }catch (Exception e){}
+            int count = 0;
+            if(count<5) {
+                System.out.println("Pipe and interface are still busy ...");
+                try {
+                    count++;
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                }
+            }
         }
         try {
             this.iface.release();
             this.pipe.close();
-            System.out.println("pipe and interface closed.");
+            System.out.println("Pipe and interface closed.");
         }catch (Exception e){
             e.printStackTrace();
-            System.out.println("pipe and interface not closed!c");
+            System.out.println("Pipe and interface not closed!");
         }
     }
 }
 
 class usbDriver{
+    public  byte[] getirp(UsbDevice device){
+         //reads the current configuration number from a device by using a control request
+        try {
+            UsbControlIrp irp = device.createUsbControlIrp(
+                    (byte) (UsbConst.REQUESTTYPE_DIRECTION_IN
+                            | UsbConst.REQUESTTYPE_TYPE_STANDARD
+                            | UsbConst.REQUESTTYPE_RECIPIENT_DEVICE),
+                    UsbConst.REQUEST_GET_CONFIGURATION,
+                    (short) 0,
+                    (short) 0
+            );
+            irp.setData(new byte[1]);
+            device.syncSubmit(irp);
+            return irp.getData();
+        }catch (UsbException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
     public UsbDevice findDevice(UsbHub hub, short vendorId, short productId)
     {
         for (UsbDevice device : (List<UsbDevice>) hub.getAttachedUsbDevices())
