@@ -7,9 +7,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="840fba1d-2a84-4d5d-9a22-503913738529" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../watchC/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/lite_server_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/lite_server_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/lite_server_jar/lite_server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/wrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars___C__Users_yay13_OneDrive_Desktop_UndergoProj_gesture_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars___C__Users_yay13_OneDrive_Desktop_UndergoProj_gesture_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars___C__Users_yay13_OneDrive_Desktop_UndergoProj_gesture_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/local.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="-1686">
+              <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#9788#9789#0" expanded="true" />
@@ -87,8 +163,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
-    <option name="y" value="27" />
+    <option name="x" value="70" />
+    <option name="y" value="57" />
     <option name="width" value="1221" />
     <option name="height" value="668" />
   </component>
@@ -98,8 +174,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,35 +181,19 @@
               <item name="lite_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="lite_server" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lite_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lite_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lite_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lite_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lite_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lite_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="RotationDriver.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547867869993" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547947373405" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -222,16 +280,18 @@
       <workItem from="1547863714819" duration="4036000" />
       <workItem from="1547868848865" duration="42000" />
       <workItem from="1547868915789" duration="18000" />
+      <workItem from="1547941525171" duration="2052000" />
+      <workItem from="1547944219435" duration="3043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94216000" />
+    <option name="totallyTimeSpent" value="99311000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="27" width="1221" height="668" extended-state="0" />
+    <frame x="70" y="57" width="1221" height="668" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2680851" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27829787" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -240,7 +300,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25570032" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13172542" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -272,8 +332,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        <state relative-caret-position="-1686">
+          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#9788#9789#0" expanded="true" />
@@ -308,7 +368,11 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+            </show-content>
+          </artifact-editor>
           <last-edited>lite_server:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
@@ -345,7 +409,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8.0_191</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -363,6 +427,17 @@
               <list>
                 <option value="0.2" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

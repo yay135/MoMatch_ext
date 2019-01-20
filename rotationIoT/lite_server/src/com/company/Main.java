@@ -34,8 +34,8 @@ public class Main {
             InetAddress myNetAddress = null;
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     System.in));
-            //System.out.println("net address not found, specify ipAddress manually:");
-            String address = "192.168.0.171";
+            System.out.println("Specify ipAddress:");
+            String address = reader.readLine();
             myNetAddress = InetAddress.getByName(address);
             ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
             List<Socket> sockets = new ArrayList<>();
@@ -43,10 +43,10 @@ public class Main {
             Map<Socket,Long> timeDiff = new HashMap();
             ExecutorService aThread = Executors.newSingleThreadExecutor();
             while (sockets.size() < 1) {
-                System.out.println("Listening for "+sockets.size()+1+"st device");
+                System.out.println("Listening for "+sockets.size()+1+"st device...");
                 Socket client = server.accept();
                 String clientAddress = client.getInetAddress().getHostAddress();
-                System.out.println("connected with" + clientAddress);
+                System.out.println("Connected with" + clientAddress);
                 BufferedReader Reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
                 PrintWriter Writer = new PrintWriter(new OutputStreamWriter(client.getOutputStream()));
                 sockets.add(client);
@@ -54,17 +54,17 @@ public class Main {
                 communicator.put("reader",Reader);communicator.put("writer",Writer);
                 communicators.put(client,communicator);
             }
-            System.out.println("started calibration");
+            //System.out.println("Started calibration");
             for(Socket client: sockets) {
                 Thread.sleep(10);
                 PrintWriter Writer = (PrintWriter) communicators.get(client).get("writer");
                 BufferedReader Reader = (BufferedReader) communicators.get(client).get("reader");
                 Writer.println("TYPE");
                 Writer.flush();
-                System.out.println("sent type to "+client.getInetAddress());
+                //System.out.println("sent type to "+client.getInetAddress());
                 Thread.sleep(10);
                 Reader.readLine();
-                System.out.println("sent time");
+                //System.out.println("sent time");
                 Writer.println("time");
                 Writer.flush();
                 ArrayList<Long> timediffs = new ArrayList<>();
@@ -96,7 +96,7 @@ public class Main {
                 }
                 timeDiff.put(client,sum/8);
             }
-            System.out.println("Successfully connected with watch");
+            System.out.println("Successfully connected with watch.");
             BufferedReader reader0 = (BufferedReader) communicators.get(sockets.get(0)).get("reader");
            // BufferedReader reader1 = (BufferedReader) communicators.get(sockets.get(1)).get("reader");
            // PrintWriter writer1 = (PrintWriter) communicators.get(sockets.get(1)).get("writer");
@@ -122,8 +122,8 @@ public class Main {
 //            };
             BufferedReader r = new BufferedReader(new InputStreamReader(
                     System.in));
-            //System.out.println("input directory:");
-            String s = "c:\\Users\\yay13\\Sensordata";
+            System.out.println("Specify data output directory:");
+            String s = r.readLine();
             final String pa = s;
             Runnable writer = new Runnable() {
                 @Override
@@ -184,6 +184,7 @@ public class Main {
                     //writer1.println("cali");
                     //writer1.flush();
                     OFFSET = NTPcal();
+                    System.out.println("INTDF:"+OFFSET+"ms");
                     driver.updateOffSet(OFFSET);
                     writer0.println("cali");
                     writer0.flush();
@@ -196,7 +197,7 @@ public class Main {
                         count += 1;
                         //writer1.println("s");
                         //writer1.flush();
-                        System.out.println("start rotation log");
+                        System.out.println("start rotation log...");
                         new Thread(new Runnable(){
                             @Override
                             public void run() {
@@ -211,10 +212,10 @@ public class Main {
                         writer0.println("e");
                         writer0.flush();
                         driver.stopRotation();
-                        System.out.println("stop rotation log");
+                        System.out.println("stop rotation log.");
                         SensorData sensordata = new SensorData();
                         sensordata.data = driver.getRotationData();
-                        writerToDisk(count,sensordata,1,"0.0.0.0",0L,"RO","afwerafda",que);
+                        writerToDisk(count,sensordata,1,"0.0.0.0",0L,"RO","rotationro",que);
                         new Thread(new Runnable() {
                             @Override
                             public void run() {
@@ -225,7 +226,7 @@ public class Main {
                                             SensorData tmp = new SensorData();
                                             tmp.data = new ArrayList<>(swData.data);
                                             swData.data.clear();
-                                            writerToDisk(count, tmp, 0, sockets.get(0).getInetAddress().toString(), timeDiff.get(sockets.get(0)), "sw", "owijeof45", que);
+                                            writerToDisk(count, tmp, 0, sockets.get(0).getInetAddress().toString(), timeDiff.get(sockets.get(0)), "sw", "watchro", que);
                                             swData.data.clear();
                                             break;
                                         }
