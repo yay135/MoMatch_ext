@@ -54,14 +54,7 @@ public class MainActivity extends WearableActivity {
                 status.setText("start");
             }
             if(message.equals("stop")){
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        ToneGenerator toneGen1 = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
-                        toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP,150);
-                        status.setText("stop");
-                    }
-                },100);
+                beep();
             }
             if(message.equals("connected")){
                 Log.e("BroadCastReceiver","received "+message);
@@ -154,4 +147,17 @@ public class MainActivity extends WearableActivity {
         LocalBroadcastManager.getInstance(this).registerReceiver(mListener,new IntentFilter("tcpc"));
         LocalBroadcastManager.getInstance(this).registerReceiver(caliListener,new IntentFilter("sensorService"));
     }
+
+    public void beep()
+    {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ToneGenerator toneGen1 = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
+                toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP,150);
+                status.setText("stop");
+            }
+        },100);
+    }
+
 }

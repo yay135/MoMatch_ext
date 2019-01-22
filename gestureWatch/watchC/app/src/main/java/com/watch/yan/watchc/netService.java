@@ -73,7 +73,7 @@ public class netService extends Service {
                     lbm.sendBroadcast(comm);
                     Log.e("comm",String.valueOf(System.currentTimeMillis()));
                 }
-                if (message.equals("e")) {
+                if (message.equals("canStart")) {
                     //netService.trigger=false;
                     Intent comm = new Intent("tcpc");
                     comm.putExtra("sig","stop");

@@ -12,7 +12,7 @@ import java.net.Socket;
 public class TCPc implements Runnable{
 
     public static final String TAG = TCPc.class.getSimpleName();
-    public static final String SERVER_IP = "192.168.0.171"; //server IP address
+    public static final String SERVER_IP = "129.252.131.152"; //server IP address
     public static final int SERVER_PORT = 8888;
     // message to send to the server
     private String mServerMessage;

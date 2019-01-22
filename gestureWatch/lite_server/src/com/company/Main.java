@@ -153,6 +153,10 @@ public class Main {
                                     } catch (Exception e) {
                                         e.printStackTrace();
                                     }
+                                    if(wrap.type.startsWith("sw")){
+                                        writer1.println("canStart");
+                                        writer1.flush();
+                                    }
                                 }
                             }
                         } catch (InterruptedException e) {
