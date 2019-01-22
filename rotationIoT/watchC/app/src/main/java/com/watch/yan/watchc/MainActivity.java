@@ -29,40 +29,13 @@ import java.util.Date;
 
 public class MainActivity extends WearableActivity {
     private Button startButton;
-    private Button stopButton;
     private TextView status;
-    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-             String message = intent.getStringExtra("message");
-             if(message.equals("start")){
-                 status.setText("netService start...");
-             }
-             if(message.equals("start0")){
-                 status.setText("SensorService start...");
-                 startButton.setEnabled(false);
-                 stopButton.setEnabled(true);
-             }
-        }
-    };
+    private boolean buttonSate = true;
 
     private BroadcastReceiver mListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("sig");
-            if(message.equals("start")){
-                status.setText("start");
-            }
-            if(message.equals("stop")){
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        ToneGenerator toneGen1 = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
-                        toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP,150);
-                        status.setText("stop");
-                    }
-                },100);
-            }
             if(message.equals("connected")){
                 Log.e("BroadCastReceiver","received "+message);
                 status.setText("connected!");
@@ -82,44 +55,62 @@ public class MainActivity extends WearableActivity {
         }
     };
 
+    private BroadcastReceiver beepListener = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            beep();
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         startButton = findViewById(R.id.button5);
-        stopButton = findViewById(R.id.button6);
         status = findViewById(R.id.textView);
         status.setText("welcome...");
+        final LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);
+
+        startService(new Intent(getApplicationContext(),netService.class));
+        //200ms after connection stable
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startService(new Intent(getApplicationContext(), SensorService.class));
+            }
+        }, 200);
         // Enables Always-on
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                startService(new Intent(getApplicationContext(),netService.class));
-                //200ms after connection stable
+                startButton.setEnabled(false);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startService(new Intent(getApplicationContext(), SensorService.class));
+                        startButton.setEnabled(true);
                     }
-                }, 200);
-            }
-        });
-        stopButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                try {
-                    stopService(new Intent(getApplicationContext(), SensorService.class));
-                    Thread.sleep(200);
-                    stopService(new Intent(getApplicationContext(), netService.class));
-                    status.setText("SensorService & netService Stop...");
-                    startButton.setEnabled(true);
-                    stopButton.setEnabled(false);
-                }catch (InterruptedException e){
-                    e.printStackTrace();
+                }, 1000);
+                if(buttonSate) {
+                    startButton.setText("Stop");
+                    Intent intent0 = new Intent("cmdServer");
+                    intent0.putExtra("sig", "start");
+                    lbm.sendBroadcastSync(intent0);
+                    Intent intent1 = new Intent("cmdSensorService");
+                    intent1.putExtra("sig", "start");
+                    lbm.sendBroadcastSync(intent1);
+                    buttonSate = false;
+                    status.setText("started");
+                }else{
+                    startButton.setText("Start");
+                    Intent intent0 = new Intent("cmdServer");
+                    intent0.putExtra("sig", "stop");
+                    lbm.sendBroadcastSync(intent0);
+                    Intent intent1 = new Intent("cmdSensorService");
+                    intent1.putExtra("sig", "stop");
+                    lbm.sendBroadcastSync(intent1);
+                    buttonSate = true;
                 }
             }
         });
-        stopButton.setEnabled(false);
         setAmbientEnabled();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON );
     }
@@ -133,15 +124,26 @@ public class MainActivity extends WearableActivity {
     @Override
     public void onPause() {
         super.onPause();
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(beepListener);
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mListener);
         LocalBroadcastManager.getInstance(this).unregisterReceiver(caliListener);
     }
     @Override
     public void onResume(){
         super.onResume();
-        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,new IntentFilter("NoticeMainActivity"));
+        LocalBroadcastManager.getInstance(this).registerReceiver(beepListener,new IntentFilter("beep"));
         LocalBroadcastManager.getInstance(this).registerReceiver(mListener,new IntentFilter("tcpc"));
         LocalBroadcastManager.getInstance(this).registerReceiver(caliListener,new IntentFilter("sensorService"));
+    }
+
+    public void beep(){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ToneGenerator toneGen1 = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
+                toneGen1.startTone(ToneGenerator.TONE_CDMA_PIP,150);
+                status.setText("stopped");
+            }
+        },100);
     }
 }

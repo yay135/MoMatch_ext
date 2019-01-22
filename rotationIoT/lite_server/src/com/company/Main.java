@@ -135,9 +135,12 @@ public class Main {
                                         synchronized (wrapper.class) {
                                             wrap.da.writeToCSV(Path);
                                         }
-                                        // System.out.println("Thread_" + wrap.type + "_" + wrap.ip + "_" + "finished writing");
                                     } catch (Exception e) {
                                         e.printStackTrace();
+                                    }
+                                    if(wrap.type.startsWith("sw")){
+                                        writer0.println("canStart");
+                                        writer0.flush();
                                     }
                                 }
                             }
@@ -153,78 +156,71 @@ public class Main {
             short vendorId = 9025;
             short productId = 18509;
             RotationDriver driver = new RotationDriver(vendorId,productId);
-            while (!exit) {
-                try {
-                    Thread.sleep(1);
-                } catch (InterruptedException e) {
-                }
-                Scanner scanner = new Scanner(System.in);
-                String input = scanner.nextLine();
-                if (input.equals("c")) {
-                    //writer1.println("cali");
-                    //writer1.flush();
-                    OFFSET = NTPcal();
-                    System.out.println("INTDF:"+OFFSET+"ms");
-                    driver.updateOffSet(OFFSET);
-                    writer0.println("cali");
-                    writer0.flush();
-                }else if(input.equals("q")){
-                    exit = true;
-                }
-                else{
-                    nextCmd = nextCmd ? false : true;
-                    ExecutorService rt = Executors.newSingleThreadExecutor();
-                    if (nextCmd) {
-                        count += 1;
-                        //writer1.println("s");
-                        //writer1.flush();
-                        System.out.println("start rotation log...");
-                        Runnable runnable = new Runnable(){
-                            @Override
-                            public void run() {
-                                driver.startRotation();
-                            }
-                        };
-                        rt.execute(runnable);
-                        writer0.println("s");
-                        writer0.flush();
-                    } else {
-                        //writer1.println("e");
-                        //writer1.flush();
-                        rt.shutdownNow();
-                        writer0.println("e");
-                        writer0.flush();
-                        driver.stopRotation();
-                        System.out.println("stop rotation log.");
-                        SensorData sensordata = new SensorData();
-                        sensordata.data = driver.getRotationData();
-                        writerToDisk(count,sensordata,1,"0.0.0.0",0L,"RO","rotationro",que);
-                        new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-                                while (true) {
-                                    try {
-                                        String data = reader0.readLine();
-                                        if (data.equals("stop")) {
-                                            SensorData tmp = new SensorData();
-                                            tmp.data = new ArrayList<>(swData.data);
-                                            swData.data.clear();
-                                            writerToDisk(count, tmp, 0, sockets.get(0).getInetAddress().toString(), timeDiff.get(sockets.get(0)), "sw", "watchro", que);
-                                            swData.data.clear();
-                                            break;
-                                        }
-                                        swData.write(data);
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            }
-                        }).start();
+            Runnable keyBoardCmd = new Runnable() {
+                @Override
+                public void run() {
+                    while (!exit) {
+                        try {Thread.sleep(1);} catch (InterruptedException e) { }
+                        Scanner scanner = new Scanner(System.in);
+                        String input = scanner.nextLine();
+                        if (input.equals("c")) {
+                            OFFSET = NTPcal();
+                            System.out.println("INTDF:"+OFFSET+"ms");
+                            driver.updateOffSet(OFFSET);
+                            writer0.println("cali");
+                            writer0.flush();
+                        }else if(input.equals("q")){
+                            exit = true;
+                        }
                     }
+                    driver.stopRotation();
+                    driver.releaseAndClosePipe();
+                }
+            };
+            ExecutorService keyBoardThread = Executors.newSingleThreadExecutor();
+            keyBoardThread.execute(keyBoardCmd);
+            while(!exit){
+                try {Thread.sleep(1);} catch (InterruptedException e) {}
+                String data = reader0.readLine();
+                if(data.equals("start")){
+                    count += 1;
+                    System.out.println("start rotation log...");
+                    Runnable runnable = new Runnable(){
+                        @Override
+                        public void run() {
+                            driver.startRotation();
+                        }
+                    };
+                    ExecutorService rt = Executors.newSingleThreadExecutor();
+                    rt.execute(runnable);
+                    while(true) {
+                        try {Thread.sleep(1);} catch (InterruptedException e) {}
+                        String data0 = reader0.readLine();
+                        if(data0.equals("stop")){
+                            rt.shutdownNow();
+                            writer0.println("e");
+                            writer0.flush();
+                            driver.stopRotation();
+                            System.out.println("stop rotation log.");
+                            SensorData sensordata = new SensorData();
+                            sensordata.data = driver.getRotationData();
+                            writerToDisk(count,sensordata,1,"0.0.0.0",0L,"RO","rotationro",que);
+                        }
+                        else if(data0.equals("end")){
+                            SensorData tmp = new SensorData();
+                            tmp.data = new ArrayList<>(swData.data);
+                            swData.data.clear();
+                            writerToDisk(count, tmp, 0, sockets.get(0).getInetAddress().toString(), timeDiff.get(sockets.get(0)), "sw", "watchro", que);
+                            swData.data.clear();
+                            break;
+                        }else{
+                            swData.write(data0);
+                        }
+                    }
+
                 }
             }
-            driver.stopRotation();
-            driver.releaseAndClosePipe();
+            keyBoardThread.shutdownNow();
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }

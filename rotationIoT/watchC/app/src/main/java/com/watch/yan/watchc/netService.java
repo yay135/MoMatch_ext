@@ -1,8 +1,10 @@
 package com.watch.yan.watchc;
 
 import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.media.AudioManager;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
@@ -35,12 +37,9 @@ public class netService extends Service {
             public void run() {
                 try {
                     runnable.run();
-                } finally {
-
-                }
+                } finally {}
             }
         };
-        //start the thread.
         t.start();
     }
 
@@ -61,20 +60,9 @@ public class netService extends Service {
         mTCP = new TCPc(lbm,fm,cm,new TCPc.OnMessageReceived() {
             @Override
             public void messageReceived(String message) {
-                Log.d("TCP:", message);
-                if (message.equals("s")) {
-                    System.out.println(System.currentTimeMillis()+"_received start");
-                    //netService.trigger=true;
-                    Intent comm = new Intent("tcpc");
-                    comm.putExtra("sig","start");
-                    lbm.sendBroadcast(comm);
-                    Log.e("comm",String.valueOf(System.currentTimeMillis()));
-                }
-                if (message.equals("e")) {
-                    //netService.trigger=false;
-                    Intent comm = new Intent("tcpc");
-                    comm.putExtra("sig","stop");
-                    lbm.sendBroadcast(comm);
+                if (message.equals("canStart")){
+                    Intent intent = new Intent("beep");
+                    lbm.sendBroadcast(intent);
                 }
                 if (message.equals("TYPE")) {
                     String t = "SWT_"+android_id;
@@ -99,8 +87,32 @@ public class netService extends Service {
             }
         });
     }
+
+    private BroadcastReceiver mListener = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String message = intent.getStringExtra("sig");
+            if(message.equals("start")){
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        sendMSG("start");
+                    }
+                }).start();
+            }
+            else if(message.equals("stop")){
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        sendMSG("stop");
+                    }
+                }).start();
+            }
+        }
+    };
     @Override
     public void onDestroy() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mListener);
         mTCP.stopClient();
         trigger = false;
         super.onDestroy();
@@ -108,17 +120,12 @@ public class netService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d("netService", "service Start");
         CreateNewThread(mTCP);
-        // sendBroadcast to mainActivity
-        Intent startNotice = new Intent("NoticeMainActivity");
-        startNotice.putExtra("message","start");
-        LocalBroadcastManager.getInstance(this).sendBroadcast(startNotice);
+        LocalBroadcastManager.getInstance(this).registerReceiver(mListener,new IntentFilter("cmdServer"));
         return super.onStartCommand(intent, flags, startId);
     }
 
     public void sendMSG(String msg) {
-        Log.e("messages",msg);
         mTCP.sendMessage(msg);
     }
 
@@ -126,7 +133,6 @@ public class netService extends Service {
         Gson gson = new Gson();
         String json = gson.toJson(m);
         return json;
-        //return json.substring(1,json.length()-1);
     }
 
     public boolean getTrigger(){
@@ -143,5 +149,6 @@ public class netService extends Service {
             return netService.this;
         }
     }
+
 }
 

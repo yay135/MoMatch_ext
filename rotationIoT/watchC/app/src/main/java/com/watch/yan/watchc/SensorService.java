@@ -76,7 +76,7 @@ public class SensorService extends Service implements SensorEventListener {
                     }
                 }).start();
                 Intent comm = new Intent("sensorService");
-                comm.putExtra("showCali",String.valueOf(offSet)+"ms");
+                comm.putExtra("showCali","Network time offset:"+String.valueOf(offSet)+"ms");
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(comm);
             }
         }
@@ -87,10 +87,8 @@ public class SensorService extends Service implements SensorEventListener {
             String message = intent.getStringExtra("sig");
             if(message.equals("start")){
                 flag = true;
-                Log.e("broadcastreceiver","received start "+String.valueOf(System.currentTimeMillis()));
             }
             if(message.equals("stop")){
-                Log.e("broadcastreceiver","received stop");
                 flag = false;
                 try {
                     Thread.sleep(50);
@@ -127,7 +125,7 @@ public class SensorService extends Service implements SensorEventListener {
         notice.putExtra("message","start0");
         LocalBroadcastManager.getInstance(this).sendBroadcast(notice);
         // recieved start or stop signal from the tcp
-        LocalBroadcastManager.getInstance(this).registerReceiver(mListener0,new IntentFilter("tcpc"));
+        LocalBroadcastManager.getInstance(this).registerReceiver(mListener0,new IntentFilter("cmdSensorService"));
         LocalBroadcastManager.getInstance(this).registerReceiver(mListener1,new IntentFilter("TimeCali"));
         return START_STICKY;
         }
@@ -242,7 +240,7 @@ public class SensorService extends Service implements SensorEventListener {
                     }
                     collected = false;
                     mSensorData.clear();
-                    mService.sendMSG("stop");
+                    mService.sendMSG("end");
                 }
                 if(flag&&!tmpData.isEmpty()){
                     final ArrayList<String[]> data1 = new ArrayList<>(tmpData);
