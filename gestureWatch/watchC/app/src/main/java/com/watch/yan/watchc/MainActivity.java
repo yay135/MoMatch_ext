@@ -46,6 +46,13 @@ public class MainActivity extends WearableActivity {
         }
     };
 
+    private BroadcastReceiver beepListener = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            beep();
+        }
+    };
+
     private BroadcastReceiver mListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -54,7 +61,6 @@ public class MainActivity extends WearableActivity {
                 status.setText("start");
             }
             if(message.equals("stop")){
-                beep();
             }
             if(message.equals("connected")){
                 Log.e("BroadCastReceiver","received "+message);
@@ -136,6 +142,7 @@ public class MainActivity extends WearableActivity {
     @Override
     public void onPause() {
         super.onPause();
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(beepListener);
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mListener);
         LocalBroadcastManager.getInstance(this).unregisterReceiver(caliListener);
@@ -143,6 +150,7 @@ public class MainActivity extends WearableActivity {
     @Override
     public void onResume(){
         super.onResume();
+        LocalBroadcastManager.getInstance(this).registerReceiver(beepListener,new IntentFilter("beep"));
         LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,new IntentFilter("NoticeMainActivity"));
         LocalBroadcastManager.getInstance(this).registerReceiver(mListener,new IntentFilter("tcpc"));
         LocalBroadcastManager.getInstance(this).registerReceiver(caliListener,new IntentFilter("sensorService"));

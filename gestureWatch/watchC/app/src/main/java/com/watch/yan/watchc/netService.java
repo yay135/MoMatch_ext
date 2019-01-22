@@ -73,17 +73,17 @@ public class netService extends Service {
                     lbm.sendBroadcast(comm);
                     Log.e("comm",String.valueOf(System.currentTimeMillis()));
                 }
-                if (message.equals("canStart")) {
+                else if (message.equals("e")) {
                     //netService.trigger=false;
                     Intent comm = new Intent("tcpc");
                     comm.putExtra("sig","stop");
                     lbm.sendBroadcast(comm);
                 }
-                if (message.equals("TYPE")) {
+                else if (message.equals("TYPE")) {
                     String t = "SWT_"+android_id;
                     sendMSG(t);
                 }
-                if (message.equals("time")) {
+                else if (message.equals("time")) {
                         for (int i=0; i<10; i++) {
                             sendMSG(Long.toString(System.currentTimeMillis()) + "t");
                             try {
@@ -94,9 +94,14 @@ public class netService extends Service {
                         }
                     sendMSG("q");
                 }
-                if (message.equals("cali")){
+                else if (message.equals("cali")){
                     Intent comm = new Intent("TimeCali");
                     comm.putExtra("cali","cal");
+                    lbm.sendBroadcast(comm);
+                }
+                else if(message.equals("canStart"))
+                {
+                    Intent comm = new Intent("beep");
                     lbm.sendBroadcast(comm);
                 }
             }

@@ -27,7 +27,7 @@ import java.util.TimerTask;
 
 /*TCPclient from the Internet https://stackoverflow.com/questions/38162775/really-simple-tcp-client*/
 public class TCPc implements Runnable{
-    public static final String SERVER_IP = "192.168.0.171";
+    public static final String SERVER_IP = "129.252.131.152";
     public static final int SERVER_PORT = 8888;
     public static final String TAG = "TCPClient";
     // message to send to the server

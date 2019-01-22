@@ -2,94 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18d74ccb-3649-46c1-933d-54971fd93e40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/app/src/main/java/com/example/yan/gestures/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/app/src/main/java/com/example/yan/gestures/TCPc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/javaCompile/taskJars.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle____local_aars____Users_yanfengyao_Desktop_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle____local_aars____Users_yanfengyao_Desktop_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle____local_aars____Users_yanfengyao_Desktop_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/watchC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/watchC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watchC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/watchC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/artifacts/lite_server_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/artifacts/lite_server_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskJars.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____Users_yanfengyao_Desktop_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____Users_yanfengyao_Desktop_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____Users_yanfengyao_Desktop_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/watchC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/watchC.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +108,7 @@
     <session id="871366429">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -281,6 +282,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="58" width="1221" height="645" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.24936171" />
       <window_info id="Structure" side_tool="true" />
