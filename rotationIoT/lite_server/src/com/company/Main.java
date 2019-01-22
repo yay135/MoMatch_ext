@@ -204,7 +204,7 @@ public class Main {
                             System.out.println("stop rotation log.");
                             SensorData sensordata = new SensorData();
                             sensordata.data = driver.getRotationData();
-                            writerToDisk(count,sensordata,1,"0.0.0.0",0L,"RO","rotationro",que);
+                            writerToDisk(count,sensordata,1,"0.0.0.0",0L,"sp","rotationro",que);
                         }
                         else if(data0.equals("end")){
                             SensorData tmp = new SensorData();
