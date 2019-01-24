@@ -99,7 +99,7 @@ do
 		read cmd
 	done
 	
-	if [ $index < 3 ]; then 
+	if [ $index -lt 3 ]; then 
 		echo "Press c to sync time after devices connected!"
 	fi
 	
