@@ -68,6 +68,8 @@ function doexp() {
 		fi
 	fi
 
+	rm -rf $path0/*
+
 	if [ -f $java0 ]; then
 		echo 'Java for GE Found.'
 		sleep 2
