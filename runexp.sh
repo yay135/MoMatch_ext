@@ -83,7 +83,7 @@ declare -a arr0=("gestureWatch/lite_server/lite_server.jar" "gestureWatch/lite_s
 
 declare -a arr1=("sdata" "kdata" "rdata" "wdata")
 
-declare -a arr2= ("gesture(watch3)" "numpad(watch3)" "swtich(watch2)" "walk(watch1)")
+declare -a arr2=("gesture watch3" "numpad watch3" "swtich watch2" "walk watch1")
 
 
 declare -i index=0
@@ -100,6 +100,8 @@ do
 	
 	if [ $index < 3 ]; then 
 		echo "Press c to sync time after devices connected!"
+	fi
+	
 	if [ "$cmd" = "y" ]; then
 		doexp ${arr0[$index]} ${arr1[$index]}
 		index=$index+1
