@@ -23,11 +23,12 @@ public class Main {
             SensorData swData = new SensorData();
             ConcurrentLinkedQueue<wrapper> que = new ConcurrentLinkedQueue<>();
             InetAddress myNetAddress = null;
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    System.in));
-            System.out.println("specify ipAddress:");
-
-            String address = reader.readLine();
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(
+//                    System.in));
+//            System.out.println("specify ipAddress:");
+//
+//            String address = reader.readLine();
+            String address = args[1];
 
             myNetAddress = InetAddress.getByName(address);
             ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
@@ -113,10 +114,11 @@ public class Main {
                     }
                 }
             };
-            BufferedReader r = new BufferedReader(new InputStreamReader(
-                    System.in));
-            System.out.println("specify directory:");
-            String dir = r.readLine();
+//            BufferedReader r = new BufferedReader(new InputStreamReader(
+//                    System.in));
+//            System.out.println("specify directory:");
+//            String dir = r.readLine();
+            String dir = args[0];
 
             final String pa = dir;
             Runnable writer = new Runnable() {
@@ -171,6 +173,9 @@ public class Main {
                 @Override
                 public void run() {
                     while(true) {
+                        try{
+                            Thread.sleep(5);
+                        }catch (InterruptedException e) {}
                         Scanner scanner = new Scanner(System.in);
                         String input = scanner.nextLine();
                         if (input.equals("c")) {
@@ -179,6 +184,8 @@ public class Main {
                             writer0.flush();
                             writer1.flush();
                             //System.out.println(input);
+                        }else if(input.equals("q")){
+                            System.exit(0);
                         }
                     }
                 }

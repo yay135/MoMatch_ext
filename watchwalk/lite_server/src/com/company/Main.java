@@ -28,10 +28,11 @@ public class Main {
             SensorData swData = new SensorData();
             ConcurrentLinkedQueue<wrapper> que = new ConcurrentLinkedQueue<>();
             InetAddress myNetAddress = null;
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    System.in));
-            System.out.println("specify ipAddress:");
-            String address = reader.readLine();
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(
+//                    System.in));
+//            System.out.println("specify ipAddress:");
+//            String address = reader.readLine();
+            String address = args[1];
 
             myNetAddress = InetAddress.getByName(address);
             ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
@@ -96,11 +97,12 @@ public class Main {
             System.out.println("Successfully connected with watch");
             BufferedReader reader0 = (BufferedReader) communicators.get(sockets.get(0)).get("reader");
             PrintWriter writer0 = (PrintWriter) communicators.get(sockets.get(0)).get("writer");
-            BufferedReader r = new BufferedReader(new InputStreamReader(
-                    System.in));
-            System.out.println("specify directory:");
-
-            String s = r.readLine();
+//            BufferedReader r = new BufferedReader(new InputStreamReader(
+//                    System.in));
+//            System.out.println("specify directory:");
+//
+//            String s = r.readLine();
+            String s = args[0];
             final String pa = s;
             Runnable writer = new Runnable() {
                 @Override
@@ -147,6 +149,24 @@ public class Main {
             ExecutorService anThread = Executors.newSingleThreadExecutor();
             anThread.execute(writer);
             boolean nextCmd = false;
+            Runnable keyBoardCmd = new Runnable() {
+                @Override
+                public void run() {
+                    boolean exit = false;
+                    while (!exit) {
+                        try {Thread.sleep(10);} catch (InterruptedException e) { }
+                        Scanner scanner = new Scanner(System.in);
+                        String input = scanner.nextLine();
+
+                        if(input.equals("q")){
+                            exit = true;
+                            System.exit(0);
+                        }
+                    }
+                }
+            };
+            ExecutorService keyBoardThread = Executors.newSingleThreadExecutor();
+            keyBoardThread.execute(keyBoardCmd);
             while (true) {
                 try {
                     Thread.sleep(1);

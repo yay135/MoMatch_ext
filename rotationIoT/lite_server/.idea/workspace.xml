@@ -6,7 +6,34 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="840fba1d-2a84-4d5d-9a22-503913738529" name="Default Changelist" comment="" />
+    <list default="true" id="840fba1d-2a84-4d5d-9a22-503913738529" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/lite_server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/lite_server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/SensorData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/SensorData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/wrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/wrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/lite_server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/lite_server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/wrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/src/com/company/Main.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="161" column="35" lean-forward="true" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
+            <state relative-caret-position="240">
+              <caret line="164" column="43" selection-start-line="164" selection-start-column="43" selection-end-line="164" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/RotationDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="615">
               <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -80,10 +107,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="46" />
-    <option name="y" value="63" />
-    <option name="width" value="1221" />
-    <option name="height" value="672" />
+    <option name="y" value="36" />
+    <option name="width" value="1280" />
+    <option name="height" value="715" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -91,6 +117,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,15 +141,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547951634311" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../watchwalk/lite_server" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -215,11 +241,12 @@
       <workItem from="1547959801083" duration="75000" />
       <workItem from="1548116192452" duration="3830000" />
       <workItem from="1548124096139" duration="198000" />
+      <workItem from="1548366068391" duration="395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106507000" />
+    <option name="totallyTimeSpent" value="106902000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -233,7 +260,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1366" height="770" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27045456" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -291,6 +318,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="164" column="43" selection-start-line="164" selection-start-column="43" selection-end-line="164" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/NTPUDPClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -298,12 +335,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javax.usb.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/RotationDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="615">
           <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -311,15 +345,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="161" column="35" lean-forward="true" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/javax.usb.properties">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

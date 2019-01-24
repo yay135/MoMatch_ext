@@ -31,10 +31,11 @@ public class Main {
             SensorData swData = new SensorData();
             ConcurrentLinkedQueue<wrapper> que = new ConcurrentLinkedQueue<>();
             InetAddress myNetAddress = null;
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    System.in));
-            System.out.println("Specify ipAddress:");
-            String address = reader.readLine();
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(
+//                    System.in));
+//            System.out.println("Specify ipAddress:");
+//            String address = reader.readLine();
+            String address = args[1];
             myNetAddress = InetAddress.getByName(address);
             ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
             List<Socket> sockets = new ArrayList<>();
@@ -100,10 +101,11 @@ public class Main {
            // BufferedReader reader1 = (BufferedReader) communicators.get(sockets.get(1)).get("reader");
            // PrintWriter writer1 = (PrintWriter) communicators.get(sockets.get(1)).get("writer");
             PrintWriter writer0 = (PrintWriter) communicators.get(sockets.get(0)).get("writer");
-            BufferedReader r = new BufferedReader(new InputStreamReader(
-                    System.in));
-            System.out.println("Specify data output directory:");
-            String s = r.readLine();
+//            BufferedReader r = new BufferedReader(new InputStreamReader(
+//                    System.in));
+//            System.out.println("Specify data output directory:");
+//            String s = r.readLine();
+            String s = args[0];
             final String pa = s;
             Runnable writer = new Runnable() {
                 @Override
@@ -160,7 +162,7 @@ public class Main {
                 @Override
                 public void run() {
                     while (!exit) {
-                        try {Thread.sleep(1);} catch (InterruptedException e) { }
+                        try {Thread.sleep(5);} catch (InterruptedException e) { }
                         Scanner scanner = new Scanner(System.in);
                         String input = scanner.nextLine();
                         if (input.equals("c")) {
@@ -171,6 +173,7 @@ public class Main {
                             writer0.flush();
                         }else if(input.equals("q")){
                             exit = true;
+                            System.exit(0);
                         }
                     }
                     driver.stopRotation();
