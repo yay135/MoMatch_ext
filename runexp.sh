@@ -83,20 +83,26 @@ declare -a arr0=("gestureWatch/lite_server/lite_server.jar" "gestureWatch/lite_s
 
 declare -a arr1=("sdata" "kdata" "rdata" "wdata")
 
+declare -a arr2= ("gesture(watch3)" "numpad(watch3)" "swtich(watch2)" "walk(watch1)")
+
 
 declare -i index=0
 while true
 do	
-	echo "Current Session: $index, Start Session?[y/n/s]"	
+	echo "Current Session: ${arr2[$index]}, Start Session?[y/n/s]"	
 	read cmd
+
 	while [ "$cmd" != "y" ] && [ "$cmd" != "n" ] && [ "$cmd" != "s" ]
 	do
 		echo 'Invalid Input!'
 		read cmd
 	done
 	
+	if [ $index < 3 ]; then 
+		echo "Press c to sync time after devices connected!"
 	if [ "$cmd" = "y" ]; then
 		doexp ${arr0[$index]} ${arr1[$index]}
+		index=$index+1
 	elif [ "$cmd" = "n" ]; then
 		exit
 	elif [ "$cmd" = "s" ]; then
