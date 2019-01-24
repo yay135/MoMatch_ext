@@ -61,14 +61,13 @@ function doexp() {
 	java0=$d/$1
 	path0=$HOME/$dataRootDir/$2/$user
 
+	rm -rf $path0
 	if ! [ -d $HOME/$dataRootDir/$2 ]; then
-		mkdir $HOME/$dataRootDir/$2 
+		mkdir $HOME/$dataRootDir/$2
 		if ! [ -d $HOME/$dataRootDir/$2/$user ]; then
 			mkdir $HOME/$dataRootDir/$2/$user
 		fi
 	fi
-
-	rm -rf $path0/*
 
 	if [ -f $java0 ]; then
 		echo 'Java for GE Found.'
