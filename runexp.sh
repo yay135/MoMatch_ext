@@ -99,8 +99,6 @@ do
 		read cmd
 	done
 	
-	fi
-	
 	if [ "$cmd" = "y" ]; then
 		doexp ${arr0[$index]} ${arr1[$index]}
 		index=$index+1
