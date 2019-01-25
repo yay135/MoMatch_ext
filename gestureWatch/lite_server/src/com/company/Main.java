@@ -141,6 +141,7 @@ public class Main {
 
             final String pa = dir;
             Runnable writer = new Runnable() {
+                int run = 0;
                 @Override
                 public void run() {
                     while (true) {
@@ -179,6 +180,8 @@ public class Main {
                                         writer1.flush();
                                     }
                                 }
+                                run++;
+                                System.out.println("Current run: " + run);
                             }
                         } catch (InterruptedException e) {
                             e.printStackTrace();

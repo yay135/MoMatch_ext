@@ -105,6 +105,7 @@ public class Main {
             String s = args[0];
             final String pa = s;
             Runnable writer = new Runnable() {
+                int run = 0;
                 @Override
                 public void run() {
                     while (true) {
@@ -138,6 +139,8 @@ public class Main {
                                     } catch (Exception e) {
                                         e.printStackTrace();
                                     }
+                                    run ++;
+                                    System.out.println("Current run: "+run);
                                 }
                             }
                         } catch (InterruptedException e) {

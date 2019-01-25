@@ -90,21 +90,21 @@ public class MainActivity extends WearableActivity {
         status = findViewById(R.id.textView);
         status.setText("welcome...");
         // Enables Always-on
-        startService(new Intent(getApplicationContext(),netService.class));
-        //200ms after connection stable
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startService(new Intent(getApplicationContext(), SensorService.class));
-            }
-        }, 200);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(getApplicationContext());
-                Intent intent = new Intent("sendStartStopToServer");
-                intent.putExtra("cmd","s");
-                lbm.sendBroadcast(intent);
+                startService(new Intent(getApplicationContext(),netService.class));
+                //200ms after connection stable
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startService(new Intent(getApplicationContext(), SensorService.class));
+                    }
+                }, 200);
+//                LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(getApplicationContext());
+//                Intent intent = new Intent("sendStartStopToServer");
+//                intent.putExtra("cmd","s");
+               // lbm.sendBroadcast(intent);
                 startButton.setEnabled(false);
                 stopButton.setEnabled(true);
             }
@@ -112,20 +112,20 @@ public class MainActivity extends WearableActivity {
         stopButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(getApplicationContext());
-                Intent intent = new Intent("sendStartStopToServer");
-                intent.putExtra("cmd","e");
-                lbm.sendBroadcast(intent);
-//                try {
-//                    stopService(new Intent(getApplicationContext(), SensorService.class));
-//                    Thread.sleep(200);
-//                    stopService(new Intent(getApplicationContext(), netService.class));
+//                LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(getApplicationContext());
+//                Intent intent = new Intent("sendStartStopToServer");
+//                intent.putExtra("cmd","e");
+//                lbm.sendBroadcast(intent);
+                try {
+                    stopService(new Intent(getApplicationContext(), SensorService.class));
+                    Thread.sleep(200);
+                    stopService(new Intent(getApplicationContext(), netService.class));
 //                    status.setText("SensorService & netService Stop...");
                     startButton.setEnabled(true);
                     stopButton.setEnabled(false);
-//                }catch (InterruptedException e){
-//                    e.printStackTrace();
-//                }
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
             }
         });
         stopButton.setEnabled(false);

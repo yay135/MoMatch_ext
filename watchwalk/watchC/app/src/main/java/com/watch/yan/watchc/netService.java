@@ -57,11 +57,8 @@ public class netService extends Service {
         this.android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
                 Settings.Secure.ANDROID_ID);
         final LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);
-        final ConnectivityManager cm =
-                (ConnectivityManager)getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        final WifiManager fm = (WifiManager)getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
-        mTCP = new TCPc(lbm,fm,cm,new TCPc.OnMessageReceived() {
+        mTCP = new TCPc(new TCPc.OnMessageReceived() {
             @Override
             public void messageReceived(String message) {
                 Log.d("TCP:", message);

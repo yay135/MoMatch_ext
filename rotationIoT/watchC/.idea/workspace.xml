@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f545b059-09cb-4c4e-9515-18ce2054c606" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/gestures_android/app/src/main/java/com/example/yan/gestures/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/gestures_android/app/src/main/java/com/example/yan/gestures/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/lite_server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/lite_server.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/lite_server/out/production/lite_server/com/company/Main.class" afterDir="false" />
@@ -28,10 +24,10 @@
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestureWatch/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lite_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lite_server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lite_server/lite_server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../lite_server/lite_server.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lite_server/out/production/lite_server/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lite_server/out/production/lite_server/com/company/Main$1.class" afterDir="false" />
@@ -44,28 +40,25 @@
       <change beforePath="$PROJECT_DIR$/../lite_server/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lite_server/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/SensorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/TCPc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/netService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/netService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../runexp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../runexp.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/lite_server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/lite_server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/wrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/lite_server/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,17 +79,18 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
+          <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -112,18 +106,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/SensorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="823">
+            <state relative-caret-position="1365">
               <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
-              <folding>
-                <element signature="e#11373#11565#0" expanded="true" />
-                <element signature="e#11564#11565#0" expanded="true" />
-                <element signature="e#12200#12392#0" expanded="true" />
-                <element signature="e#12391#12392#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -131,13 +119,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/netService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="113" column="39" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
+            <state relative-caret-position="-30">
+              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
               <folding>
-                <element signature="e#3680#3847#0" expanded="true" />
-                <element signature="e#3846#3847#0" expanded="true" />
-                <element signature="e#3936#4103#0" expanded="true" />
-                <element signature="e#4102#4103#0" expanded="true" />
+                <element signature="e#3942#4110#0" expanded="true" />
+                <element signature="e#4109#4110#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,7 +132,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
+            <state relative-caret-position="-420">
               <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
             </state>
           </provider>
@@ -155,8 +141,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/TCPc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+            <state relative-caret-position="420">
+              <caret line="38" column="44" lean-forward="true" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -169,9 +155,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/netService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/SensorService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/TCPc.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/netService.java" />
       </list>
     </option>
   </component>
@@ -187,8 +173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
@@ -212,12 +196,19 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="device.picker.selection" value="603KPFX030779" />
+    <property name="device.picker.selection" value="604KPLC040184" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gestureWatch/watchC" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.watch.yan.watchc" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -308,71 +299,63 @@
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1366" height="770" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32954547" />
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Build Variants" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Logcat" visible="true" weight="0.425" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Android Profiler" />
-      <window_info anchor="bottom" id="Debug" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Build" weight="0.3296875" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17575757" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.125" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.1640625" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/SensorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
+        <state relative-caret-position="-420">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/netService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="113" column="39" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
+        <state relative-caret-position="-30">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
           <folding>
-            <element signature="e#3680#3847#0" expanded="true" />
-            <element signature="e#3846#3847#0" expanded="true" />
-            <element signature="e#3936#4103#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/SensorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
-          <folding>
-            <element signature="e#11373#11565#0" expanded="true" />
-            <element signature="e#11564#11565#0" expanded="true" />
-            <element signature="e#12200#12392#0" expanded="true" />
-            <element signature="e#12391#12392#0" expanded="true" />
+            <element signature="e#3942#4110#0" expanded="true" />
+            <element signature="e#4109#4110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/watch/yan/watchc/TCPc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+        <state relative-caret-position="420">
+          <caret line="38" column="44" lean-forward="true" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
         </state>
       </provider>
     </entry>
