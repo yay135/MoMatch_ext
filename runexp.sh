@@ -82,9 +82,9 @@ function doexp() {
 
 declare -a arr0=("gestureWatch/lite_server/lite_server.jar" "gestureWatch/lite_server/lite_server.jar" "rotationIoT/lite_server/lite_server.jar" "watchwalk/lite_server/lite_server.jar")
 
-declare -a arr1=("sdata" "kdata" "rdata" "wdata")
+declare -a arr1=("kdata" "sdata" "rdata" "wdata")
 
-declare -a arr2=("gesture watch3" "numpad watch3" "swtich watch2" "walk watch1")
+declare -a arr2=("numpad watch3" "gesture watch3" "swtich watch2" "walk watch1")
 
 
 declare -i index=0
