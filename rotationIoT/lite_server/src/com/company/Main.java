@@ -5,6 +5,7 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.opencsv.CSVWriter;
 import org.apache.commons.net.ntp.TimeInfo;
+import org.omg.CORBA.TCKind;
 import sun.rmi.runtime.Log;
 
 import java.io.*;
@@ -158,6 +159,30 @@ public class Main {
             short vendorId = 9025;
             short productId = 18509;
             RotationDriver driver = new RotationDriver(vendorId,productId);
+            boolean finished = false;
+            int Tcount = 0;
+            List<Long> sts = new ArrayList<>();
+            List<Long> wts = new ArrayList<>();
+            while(!finished){
+                try {
+                    Thread.sleep(800);
+                    System.out.println("Syncing time with NTP...");
+                    long st = NTPcal();
+                    System.out.println("INTDF:" + st + "ms");
+                    writer0.println("cali");
+                    writer0.flush();
+                    Tcount++;
+                    if(Tcount>9){
+                        finished = true;
+                    }
+                    sts.add(st);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+            OFFSET = removeMaxMinAvg(sts);
+            driver.updateOffSet(OFFSET);
+            System.out.println("OK!");
             Runnable keyBoardCmd = new Runnable() {
                 @Override
                 public void run() {
@@ -165,13 +190,7 @@ public class Main {
                         try {Thread.sleep(5);} catch (InterruptedException e) { }
                         Scanner scanner = new Scanner(System.in);
                         String input = scanner.nextLine();
-                        if (input.equals("c")) {
-                            OFFSET = NTPcal();
-                            System.out.println("INTDF:"+OFFSET+"ms");
-                            driver.updateOffSet(OFFSET);
-                            writer0.println("cali");
-                            writer0.flush();
-                        }else if(input.equals("q")){
+                        if(input.equals("q")){
                             exit = true;
                             System.exit(0);
                         }
@@ -256,6 +275,35 @@ public class Main {
             e.printStackTrace();
         }
         return offSet;
+    }
+
+    private static long removeMaxMinAvg(List<Long> ls) {
+        if (ls.size() < 2) return 0;
+        int maxIndex = 0;
+        long max = ls.get(0);
+        for (int i = 0; i < ls.size(); i++) {
+            if (ls.get(i) > max) {
+                max = ls.get(i);
+                maxIndex = i;
+            }
+        }
+        ls.remove(maxIndex);
+
+        int minIndex = 0;
+        long min = ls.get(0);
+        for (int i = 0; i < ls.size(); i++) {
+            if (ls.get(i) < min) {
+                min = ls.get(i);
+                minIndex = i;
+            }
+        }
+        ls.remove(minIndex);
+
+        long sum = 0L;
+        for (long num : ls) {
+            sum += num;
+        }
+        return sum / ls.size();
     }
 }
 class SensorData {

@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -48,6 +49,8 @@ public class SensorService extends Service implements SensorEventListener {
         }
     };
     private BroadcastReceiver mListener1 = new BroadcastReceiver() {
+        int Tcount = 0;
+        private List<Long> ts = new ArrayList<>();
         @Override
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("cali");
@@ -61,24 +64,54 @@ public class SensorService extends Service implements SensorEventListener {
                             TimeInfo info = client.getTime(hostAddr);
                             info.computeDetails(); // compute offset/delay if not already done
                             Long offsetValue= info.getOffset();
-                            offSet = offsetValue;
+                            ts.add(offsetValue);
                             Long delayValue = info.getDelay();
                             String delay = (delayValue == null) ? "N/A" : delayValue.toString();
                             String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
-
-                            Log.e("TNPUDP"," Roundtrip delay(ms)=" + delay
-                                    + ", clock offset(ms)=" + offset); // offset in ms
                             client.close();
-                            Log.d("offSet","set to"+String.valueOf(offSet));
                         }catch(IOException e){
                             e.printStackTrace();
                         }
                     }
                 }).start();
-                Intent comm = new Intent("sensorService");
-                comm.putExtra("showCali","Network time offset:"+String.valueOf(offSet)+"ms");
-                LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(comm);
+                Tcount++;
+                if(Tcount>15) Tcount = 1;
+                if(Tcount>=14){
+                    offSet = removeMaxMinAvg(ts);
+                   Log.e("offset",String.valueOf(offSet));
+                    Intent showc = new Intent("sensorService");
+                    showc.putExtra("showCali",offSet+"ms");
+                    LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(showc);
+                }
             }
+        }
+        private long removeMaxMinAvg(List<Long> ls){
+            if(ls.size()<2) return 0;
+            int maxIndex = 0;
+            long max = ls.get(0);
+            for(int i=0;i<ls.size();i++){
+                if(ls.get(i)>max){
+                    max = ls.get(i);
+                    maxIndex = i;
+                }
+            }
+            ls.remove(maxIndex);
+
+            int minIndex = 0;
+            long min = ls.get(0);
+            for(int i=0;i<ls.size();i++){
+                if(ls.get(i)<min){
+                    min = ls.get(i);
+                    minIndex = i;
+                }
+            }
+            ls.remove(minIndex);
+
+            long sum = 0L;
+            for(long num:ls){
+                sum +=num;
+            }
+            return sum/ls.size();
         }
     };
     private BroadcastReceiver mListener0 = new BroadcastReceiver() {

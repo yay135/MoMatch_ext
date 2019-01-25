@@ -85,9 +85,6 @@ public class MainActivity extends AppCompatActivity {
             case KeyEvent.KEYCODE_NUMPAD_9:
                 valid = true;
                 keyData[2] = "9";
-            case KeyEvent.KEYCODE_ENTER:
-                valid = true;
-                keyData[2] = "Enter";
         }
         if(valid && !keyDatas.containsKey(keyCode)){
             keyDatas.put(keyCode,keyData);
@@ -101,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
     private BroadcastReceiver cListener = new BroadcastReceiver() {
+        int Tcount = 0;
+        private List<Long> ts = new ArrayList<>();
         @Override
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("cali");
@@ -113,22 +112,52 @@ public class MainActivity extends AppCompatActivity {
                             InetAddress hostAddr = InetAddress.getByName("time.google.com");
                             TimeInfo info = client.getTime(hostAddr);
                             info.computeDetails(); // compute offset/delay if not already done
-                            Long offsetValue = info.getOffset();
-                            offSet = offsetValue;
+                            Long offsetValue= info.getOffset();
+                            ts.add(offsetValue);
                             Long delayValue = info.getDelay();
                             String delay = (delayValue == null) ? "N/A" : delayValue.toString();
                             String offset = (offsetValue == null) ? "N/A" : offsetValue.toString();
-
-                            Log.e("TNPUDP", " Roundtrip delay(ms)=" + delay
-                                    + ", clock offset(ms)=" + offset); // offset in ms
                             client.close();
-                        } catch (IOException e) {
+                        }catch(IOException e){
                             e.printStackTrace();
                         }
                     }
                 }).start();
-                tim.setText(offSet+"ms");
+                Tcount++;
+                if(Tcount>10) Tcount = 1;
+                if(Tcount>=9){
+                    offSet = removeMaxMinAvg(ts);
+                    tim.setText("INTDF"+offSet+"ms");
+                }
             }
+        }
+        private long removeMaxMinAvg(List<Long> ls){
+            if(ls.size()<2) return 0;
+            int maxIndex = 0;
+            long max = ls.get(0);
+            for(int i=0;i<ls.size();i++){
+                if(ls.get(i)>max){
+                    max = ls.get(i);
+                    maxIndex = i;
+                }
+            }
+            ls.remove(maxIndex);
+
+            int minIndex = 0;
+            long min = ls.get(0);
+            for(int i=0;i<ls.size();i++){
+                if(ls.get(i)<min){
+                    min = ls.get(i);
+                    minIndex = i;
+                }
+            }
+            ls.remove(minIndex);
+
+            long sum = 0L;
+            for(long num:ls){
+                sum +=num;
+            }
+            return sum/ls.size();
         }
     };
 

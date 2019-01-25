@@ -52,7 +52,7 @@ do
 done
 
 if [ "$d" = "$r" ]; then
-	echo 'Project Home Not Found!'
+	echo 'ERROR:Project Home Not Found!'
 	exit
 fi
 
@@ -75,7 +75,7 @@ function doexp() {
 		echo 'Initializing GE ...'
 		java -jar $java0 $path0 $addr
 	else
-		echo "$java0 Not Found!"
+		echo "ERROR:$java0 Not Found!"
 		exit
 	fi
 }
@@ -99,8 +99,6 @@ do
 		read cmd
 	done
 	
-	if [ $index -lt 3 ]; then 
-		echo "Press c to sync time after devices connected!"
 	fi
 	
 	if [ "$cmd" = "y" ]; then

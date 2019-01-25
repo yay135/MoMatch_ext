@@ -95,6 +95,25 @@ public class Main {
             BufferedReader reader1 = (BufferedReader) communicators.get(sockets.get(1)).get("reader");
             PrintWriter writer1 = (PrintWriter) communicators.get(sockets.get(1)).get("writer");
             PrintWriter writer0 = (PrintWriter) communicators.get(sockets.get(0)).get("writer");
+
+            boolean finished = false;
+            int Tcount = 0;
+            while(!finished){
+                try {
+                    Thread.sleep(800);
+                    System.out.println("Syncing time with NTP...");
+                    writer0.println("cali");
+                    writer0.flush();
+                    writer1.println("cali");
+                    writer1.flush();
+                    Tcount++;
+                    if(Tcount>9){
+                        finished = true;
+                    }
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
             Runnable Daw = new Runnable() {
                 @Override
                 public void run() {
@@ -178,13 +197,7 @@ public class Main {
                         }catch (InterruptedException e) {}
                         Scanner scanner = new Scanner(System.in);
                         String input = scanner.nextLine();
-                        if (input.equals("c")) {
-                            writer0.println("cali");
-                            writer1.println("cali");
-                            writer0.flush();
-                            writer1.flush();
-                            //System.out.println(input);
-                        }else if(input.equals("q")){
+                        if(input.equals("q")){
                             System.exit(0);
                         }
                     }

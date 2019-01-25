@@ -91,7 +91,7 @@ public class netService extends Service {
     private BroadcastReceiver mListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            String message = intent.getStringExtra("sig");
+            final String message = intent.getStringExtra("sig");
             if(message.equals("start")){
                 new Thread(new Runnable() {
                     @Override
@@ -105,6 +105,13 @@ public class netService extends Service {
                     @Override
                     public void run() {
                         sendMSG("stop");
+                    }
+                }).start();
+            }else if(message.startsWith("INTDF")){
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        sendMSG(message);
                     }
                 }).start();
             }
