@@ -119,11 +119,13 @@ class usbDriver{
     }
     public UsbDevice findDevice(byte portNumber, UsbHub hub, short vendorId, short productId)
     {
+        System.out.println("looking for BUS: "+ portNumber);
         for (UsbDevice device : (List<UsbDevice>) hub.getAttachedUsbDevices())
         {
             UsbDeviceDescriptor desc = device.getUsbDeviceDescriptor();
             System.out.println("Devices found:");
             System.out.println("vendorId:"+desc.idVendor()+",prodcutId:"+desc.idProduct());
+            System.out.println("at bus:" + device.getParentUsbPort().getPortNumber());
             if (desc.idVendor() == vendorId && desc.idProduct() == productId
                     && device.getParentUsbPort().getPortNumber()==portNumber){
                 System.out.println("in port: "+portNumber);
