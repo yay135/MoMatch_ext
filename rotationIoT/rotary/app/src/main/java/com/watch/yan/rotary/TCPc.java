@@ -14,7 +14,7 @@ public class TCPc implements Runnable {
 
     public static final String TAG = TCPc.class.getSimpleName();
     public static final String SERVER_IP = "129.252.131.152"; //server IP address
-    public static final int SERVER_PORT = 8888;
+    public static final int SERVER_PORT = 5555;
     // message to send to the server
     private String mServerMessage;
     // sends message received notifications
