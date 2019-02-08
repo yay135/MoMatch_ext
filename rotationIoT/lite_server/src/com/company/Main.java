@@ -38,11 +38,14 @@ public class Main {
 //            String address = reader.readLine();
             String address = args[1];
             myNetAddress = InetAddress.getByName(address);
-            ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
+            ServerSocket server = new ServerSocket(5555, 10, myNetAddress);
             List<Socket> sockets = new ArrayList<>();
             Map<Socket, Map<String,Object>> communicators = new HashMap<>();
             Map<Socket,Long> timeDiff = new HashMap();
             ExecutorService aThread = Executors.newSingleThreadExecutor();
+            short vendorId = 9025;
+            short productId = 18509;
+            RotationDriver driver = new RotationDriver(1,vendorId,productId);
             while (sockets.size() < 1) {
                 System.out.println("Listening for "+sockets.size()+1+"st device...");
                 Socket client = server.accept();
@@ -159,9 +162,6 @@ public class Main {
             ExecutorService anThread = Executors.newSingleThreadExecutor();
             anThread.execute(writer);
             boolean nextCmd = false;
-            short vendorId = 9025;
-            short productId = 18509;
-            RotationDriver driver = new RotationDriver(vendorId,productId);
             boolean finished = false;
             int Tcount = 0;
             List<Long> sts = new ArrayList<>();

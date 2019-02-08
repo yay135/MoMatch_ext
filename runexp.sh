@@ -17,7 +17,7 @@ function valid_ip()
     return $stat
 }
 
-dataRootDir='data'
+dataRootDir='mock_data0'
 
 echo Enter User Name:
 read user
@@ -35,7 +35,7 @@ done
 if [ -d $HOME/$dataRootDir ]; then
 	echo Data output:$HOME/$dataRootDir
 else 
-	mkdir data
+	mkdir $dataRootDir
 fi
 
 list=$(find $HOME -name "MoMatch*")
@@ -80,7 +80,8 @@ function doexp() {
 	fi
 }
 
-declare -a arr0=("gestureWatch/lite_server/lite_server.jar" "gestureWatch/lite_server/lite_server.jar" "rotationIoT/lite_server/lite_server.jar" "watchwalk/lite_server/lite_server.jar")
+declare -a arr0=("gestureWatch/lite_server/jars/lite_server.jar" "gestureWatch/lite_server/jars/lite_server.jar" "rotationIoT/lite_server/jars/lite_server.jar" "watchwalk/lite_server/jars/lite_server.jar")
+
 
 declare -a arr1=("kdata" "sdata" "rdata" "wdata")
 

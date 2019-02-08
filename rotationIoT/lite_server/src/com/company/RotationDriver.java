@@ -2,10 +2,10 @@ package com.company;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import javax.management.Descriptor;
 import javax.usb.*;
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class RotationDriver {
     private boolean exit = false;
@@ -13,7 +13,7 @@ public class RotationDriver {
     private long offSet = 0;
     private UsbInterface iface = null;
     private UsbPipe pipe = null;
-    public RotationDriver(short vid, short pid){
+    public RotationDriver(int portNumber, short vid, short pid){
         try {
             //init virtual usb hub
             usbDriver driver = new usbDriver();
@@ -22,7 +22,9 @@ public class RotationDriver {
             // find desired usb device
             short vendorId = vid;
             short productId = pid;
-            UsbDevice device = driver.findDevice(hub, vendorId, productId);
+            byte pn = (byte)portNumber;
+            UsbDevice device = driver.findDevice(pn, hub, vendorId, productId);
+            //UsbDeviceDescriptor descriptor = device.getUsbDeviceDescriptor();
             //driver.getirp(device);
             // Use interface to communicate with devices
             UsbConfiguration configuration = device.getActiveUsbConfiguration();
@@ -115,21 +117,26 @@ class usbDriver{
         }
         return null;
     }
-    public UsbDevice findDevice(UsbHub hub, short vendorId, short productId)
+    public UsbDevice findDevice(byte portNumber, UsbHub hub, short vendorId, short productId)
     {
         for (UsbDevice device : (List<UsbDevice>) hub.getAttachedUsbDevices())
         {
             UsbDeviceDescriptor desc = device.getUsbDeviceDescriptor();
             System.out.println("Devices found:");
             System.out.println("vendorId:"+desc.idVendor()+",prodcutId:"+desc.idProduct());
-            if (desc.idVendor() == vendorId && desc.idProduct() == productId) return device;
+            if (desc.idVendor() == vendorId && desc.idProduct() == productId
+                    && device.getParentUsbPort().getPortNumber()==portNumber){
+                System.out.println("in port: "+portNumber);
+                return device;
+            }
             if (device.isUsbHub())
             {
-                device = findDevice((UsbHub) device, vendorId, productId);
+                device = findDevice(portNumber, (UsbHub) device, vendorId, productId);
                 if (device != null) return device;
             }
         }
         System.out.println("Device not found");
         return null;
     }
+
 }

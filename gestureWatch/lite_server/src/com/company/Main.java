@@ -31,7 +31,7 @@ public class Main {
             String address = args[1];
 
             myNetAddress = InetAddress.getByName(address);
-            ServerSocket server = new ServerSocket(8888, 10, myNetAddress);
+            ServerSocket server = new ServerSocket(5555, 10, myNetAddress);
             List<Socket> sockets = new ArrayList<>();
             Map<Socket, Map<String,Object>> communicators = new HashMap<>();
             Map<Socket,Long> timeDiff = new HashMap();

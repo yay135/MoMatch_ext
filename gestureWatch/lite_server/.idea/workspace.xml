@@ -2,73 +2,469 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="lite_server:jar" />
+      <artifact name="lite_server_mirror:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="840fba1d-2a84-4d5d-9a22-503913738529" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../gestures_android/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_keyTouch_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_keyTouch_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_keyTouch_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/libraries/Gradle__com_google_android_wearable_wearable_2_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keyTouch/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_rotary_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_rotary_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_rotary_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/.idea/libraries/Gradle__com_google_android_wearable_wearable_2_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rotationIoT/rotary/rotary.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_walker_walker_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_walker_walker_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_walker_walker_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/libraries/Gradle__com_google_android_wearable_wearable_2_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../walker/walker/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gestures_android/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../gestures_android/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gestures_android/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gestures_android/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestures_android/app/src/main/java/com/example/yan/gestures/TCPc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/lite_server_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c;/Users/yay13/Sensordata/exp_45/1/sp_-3756.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c;/Users/yay13/Sensordata/exp_45/1/sw_-1081.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lite_server.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/SensorData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lite_server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lite_server/com/company/wrapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/javaCompile/taskJars.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/caches/gradle_models.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_gestureWatch_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/libraries/Gradle__com_google_android_wearable_wearable_2_3_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/NTPUDPClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/com/watch/yan/watchc/netService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/lib/commons-net-3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/lib/gson-2.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/java/lib/opencsv-4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/res/values-round/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchC/watchC.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/.idea/artifacts/lite_server_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/lite_server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/lite_server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-527.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-567.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-580.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-582.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-584.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-585.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-586.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-587.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-588.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-589.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/1/sw_-594.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/2/sw_-580.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/2/sw_-582.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/2/sw_-585.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/2/sw_-586.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/2/sw_-588.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/2/sw_-589.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/2/sw_-594.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/3/sw_-580.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/3/sw_-585.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/3/sw_-586.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/3/sw_-588.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/3/sw_-594.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/4/sw_-580.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/4/sw_-585.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/4/sw_-586.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/4/sw_-588.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/4/sw_-594.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/5/sw_-585.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/5/sw_-586.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/5/sw_-588.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/6/sw_-585.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_45/6/sw_-588.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_da/1/RO_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_da/2/RO_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_da/3/RO_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_da/4/RO_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_da/5/RO_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c:\Users\yay13\Sensordata/exp_da/6/RO_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c;/Users/yay13/Sensordata/exp_45/1/sp_-3756.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/c;/Users/yay13/Sensordata/exp_45/1/sw_-1081.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/lite_server.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/Main$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/SensorData$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/SensorData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/wrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/RotationDriver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/RotationDriver$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/RotationDriver$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/RotationDriver$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/RotationDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/RotationDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/usbDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/out/production/lite_server/com/company/usbDriver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../runexp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../runexp.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/lite_server/src/com/company/RotationDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../rotationIoT/lite_server/src/com/company/RotationDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/javaCompile/taskJars.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.6/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.gradle/vcsWorkingDirs/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/caches/gradle_models.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_rotationIoT_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/libraries/Gradle__com_google_android_wearable_wearable_2_3_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/NTPUDPClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/lib/commons-net-3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/lib/gson-2.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/java/lib/opencsv-4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/res/values-round/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../rotationIoT/watchC/watchC.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/artifacts/lite_server_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/libraries/opencsv_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/c;/Users/yay13/Sensordata/exp_45/1/sp_-3756.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/c;/Users/yay13/Sensordata/exp_45/1/sw_-1081.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/lib/gson-2.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/lib/opencsv-4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/lite_server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/lite_server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/lite_server_jar/lite_server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/artifacts/lite_server_jar/lite_server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/SensorData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/out/production/lite_server/com/company/wrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/lite_server/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/javaCompile/taskJars.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/caches/gradle_models.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_commons_net_3_6_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_gson_2_6_2_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle____local_aars____home_yan_projects_MoMatch_ext_watchwalk_watchC_app_src_main_java_lib_opencsv_4_0_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_percent_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_android_support_wear_27_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_license_12_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_support_wearable_2_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/libraries/Gradle__com_google_android_wearable_wearable_2_3_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/NTPUDPClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/SensorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/TCPc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/com/watch/yan/watchc/netService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/lib/commons-net-3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/lib/gson-2.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/java/lib/opencsv-4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/res/values-round/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../watchwalk/watchC/watchC.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,8 +478,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="121" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="255">
+              <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,7 +539,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547583943680" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../walker/lite_server" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -224,17 +620,19 @@
       <workItem from="1548365741051" duration="326000" />
       <workItem from="1548366409622" duration="51000" />
       <workItem from="1548382221239" duration="2142000" />
+      <workItem from="1548386821397" duration="665000" />
+      <workItem from="1549402576279" duration="143000" />
+      <workItem from="1549597844123" duration="112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83407000" />
+    <option name="totallyTimeSpent" value="84327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1366" height="770" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23181818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24318182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -272,8 +670,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="255">
+          <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -286,7 +684,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>lite_server:jar</last-edited>
+          <last-edited>lite_server_mirror:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
